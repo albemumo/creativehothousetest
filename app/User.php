@@ -26,4 +26,12 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    /**
+     * Get the individualTrade for the user.
+     */
+    public function individualTrades()
+    {
+        return $this->hasMany('App\IndividualTrade');
+    }
 }
