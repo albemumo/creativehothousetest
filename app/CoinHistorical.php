@@ -4,28 +4,18 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Coin extends Model
+class CoinHistorical extends Model
 {
     /**
      * The database table used by the entity.
      *
      * @var string
      */
-    protected $table = 'coins';
-
+    protected $table = 'coins_historicals';
     /**
      * The primary key for the entity.
      *
      * @var string
      */
     protected $primaryKey = 'id';
-
-    /**
-     * Get the userTrade for the coin.
-     */
-    public function userTrades()
-    {
-        return $this->hasMany('App\UserTrade');
-    }
-
 }

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateHistoricalsTable extends Migration
+class CreateCoinsHistoricalsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateHistoricalsTable extends Migration
      */
     public function up()
     {
-        Schema::create('historicals', function (Blueprint $table) {
+        Schema::create('coins_historicals', function (Blueprint $table) {
             $table->increments('id');
             $table->decimal('price_usd', 16, 9);
             $table->dateTimeTz('snapshot_at');
@@ -27,6 +27,6 @@ class CreateHistoricalsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('historicals');
+        Schema::dropIfExists('coins_historicals');
     }
 }

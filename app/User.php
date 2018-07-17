@@ -10,6 +10,19 @@ class User extends Authenticatable
     use Notifiable;
 
     /**
+     * The database table used by the entity.
+     *
+     * @var string
+     */
+    protected $table = 'users';
+    /**
+     * The primary key for the entity.
+     *
+     * @var string
+     */
+    protected $primaryKey = 'id';
+
+    /**
      * The attributes that are mass assignable.
      *
      * @var array
@@ -28,10 +41,10 @@ class User extends Authenticatable
     ];
 
     /**
-     * Get the individualTrade for the user.
+     * Get the userTrade for the user.
      */
-    public function individualTrades()
+    public function userTrades()
     {
-        return $this->hasMany('App\IndividualTrade');
+        return $this->hasMany('App\UserTrade');
     }
 }

@@ -8,6 +8,7 @@ class CoinTableSeeder extends Seeder
 {
     private $client;
     private $totalCryptocurrencies;
+
     /**
      * Run the database seeds.
      *
@@ -37,6 +38,11 @@ class CoinTableSeeder extends Seeder
         }
     }
 
+    /**
+     * @param $start
+     * @param $limit
+     * @throws Exception
+     */
     private function getCurrencies($start, $limit) {
         $response = $this->client->get('?convert=BTC&start=' . $start . '&limit=' . $limit . '&sort=id');
         $responseBody = $response->getBody();
