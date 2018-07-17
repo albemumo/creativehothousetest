@@ -7,14 +7,14 @@ use Illuminate\Database\Eloquent\Model;
 class Coin extends Model
 {
     /**
-     * The database table used by the entity.
+     * The table associated with the model.
      *
      * @var string
      */
     protected $table = 'coins';
 
     /**
-     * The primary key for the entity.
+     * The primary key for the model.
      *
      * @var string
      */
@@ -26,6 +26,14 @@ class Coin extends Model
     public function userTrades()
     {
         return $this->hasMany('App\UserTrade');
+    }
+
+    /**
+     * Get the coinHistorical for the coin.
+     */
+    public function coinHistoricals()
+    {
+        return $this->hasMany('App\CoinHistorical');
     }
 
 }

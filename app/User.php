@@ -10,13 +10,15 @@ class User extends Authenticatable
     use Notifiable;
 
     /**
-     * The database table used by the entity.
+     * The table associated with the model.
      *
      * @var string
      */
+
     protected $table = 'users';
+
     /**
-     * The primary key for the entity.
+     * The primary key for the model.
      *
      * @var string
      */

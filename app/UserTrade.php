@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class UserTrade extends Model
 {
     /**
-     * The database table used by the entity.
+     * The table associated with the model.
      *
      * @var string
      */
