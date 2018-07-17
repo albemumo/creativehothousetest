@@ -15,11 +15,10 @@ class CreateCoinsTable extends Migration
     {
         Schema::create('coins', function (Blueprint $table) {
             $table->increments('id');
-
             $table->string('name');
             $table->string('symbol');
             $table->string('logo')->nullable();
-            $table->integer('rank');
+            $table->unsignedInteger('rank');
             $table->decimal('price_usd', 16, 9)->nullable();
             $table->decimal('price_btc', 20, 13)->nullable();;
             $table->decimal('24h_volume_usd', 20, 9)->nullable();
@@ -29,8 +28,6 @@ class CreateCoinsTable extends Migration
             $table->decimal('percent_change_1h', 8, 2)->nullable();
             $table->decimal('percent_change_24h', 8, 2)->nullable();
             $table->decimal('percent_change_7d', 8, 2)->nullable();
-
-            // $table->timestamps();
             $table->timestampsTz();
         });
     }

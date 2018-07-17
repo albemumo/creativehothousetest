@@ -15,6 +15,8 @@ class CreateCoinsHistoricalsTable extends Migration
     {
         Schema::create('coins_historicals', function (Blueprint $table) {
             $table->increments('id');
+            // $table->unsignedInteger('coin_id');
+            // $table->foreign('coin_id')->references('id')->on('coins');
             $table->decimal('price_usd', 16, 9);
             $table->dateTimeTz('snapshot_at');
         });
