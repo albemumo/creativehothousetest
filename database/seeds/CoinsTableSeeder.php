@@ -4,7 +4,7 @@ use App\Coin;
 use Illuminate\Database\Seeder;
 use GuzzleHttp\Client;
 
-class CoinTableSeeder extends Seeder
+class CoinsTableSeeder extends Seeder
 {
     private $client;
     private $totalCryptocurrencies;
