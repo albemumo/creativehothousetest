@@ -17,7 +17,7 @@ class CreateCoinsHistoricalsTable extends Migration
             $table->increments('id');
             $table->unsignedInteger('coin_id');
             $table->foreign('coin_id')->references('id')->on('coins');
-            $table->decimal('price_usd', 16, 9);
+            $table->decimal('price_usd', 16, 9)->nullable();
             $table->dateTimeTz('snapshot_at');
         });
     }
