@@ -14,8 +14,11 @@ use Illuminate\Http\Request;
 */
 
 Route::apiResource('coins', 'CoinController');
-// Route::apiResource('coins', 'UserController@historical');
 Route::get('coins/{id}/historical', 'CoinController@historical');
+
+Route::apiResource('portfolio', 'PortfolioController');
+Route::post('portfolio', 'PortfolioController@store');
+
 
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {

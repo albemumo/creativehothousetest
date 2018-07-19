@@ -21,6 +21,13 @@ class UserTrade extends Model
     protected $primaryKey = 'id';
 
     /**
+     * The attributes that aren't mass assignable.
+     *
+     * @var array
+     */
+    protected $guarded = ['id', 'created_at', 'updated_at'];
+
+    /**
      * Get the coin that owns the userTrade.
      */
     public function coin()
