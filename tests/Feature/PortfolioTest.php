@@ -25,18 +25,18 @@ class PortfolioTest extends TestCase
 
     public function testApiPortfolioGetOk()
     {
-        $coin = factory(Coin::class)->create();
+
         $user = factory(User::class)->create();
-        $userTrade = factory(UserTrade::class)->create(
-//            [
+        factory(UserTrade::class)->create();
+//        $coin = factory(Coin::class)->create();
+//        $userTrade = factory(UserTrade::class)->create([
 //            'coin_id' => $coin->id,
 //            'user_id' => $user->id,
 //            'amount' => '100',
 //            'price_usd' => '10.10',
 //            'traded_at' => new Carbon('now'),
 //            'notes' => 'Silent is gold.',
-//        ]
-        );
+//        ]);
 
         $response = $this->actingAs($user, 'api')->json('GET', '/api/portfolio');
 
