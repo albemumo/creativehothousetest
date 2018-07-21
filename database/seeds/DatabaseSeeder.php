@@ -14,7 +14,7 @@ class DatabaseSeeder extends Seeder
         $this->call([
 //            UsersTableSeeder::class,
             CoinsTableSeeder::class,
-            CoinsHistoricalsTableSeeder::class,
+            CoinHistoricalsTableSeeder::class,
         ]);
     }
 }

@@ -11,7 +11,7 @@ class CoinHistorical extends Model
      *
      * @var string
      */
-    protected $table = 'coins_historicals';
+    protected $table = 'coin_historicals';
 
     /**
      * The primary key for the model.

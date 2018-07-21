@@ -4,7 +4,7 @@ use App\CoinHistorical;
 use Carbon\Carbon;
 use Illuminate\Database\Seeder;
 
-class CoinsHistoricalsTableSeeder extends Seeder
+class CoinHistoricalsTableSeeder extends Seeder
 {
     private function createCoinHistorical(int $coinId, float $priceUsd, Carbon $snapshotAt)
     {
@@ -14,6 +14,7 @@ class CoinsHistoricalsTableSeeder extends Seeder
             'snapshot_at' => $snapshotAt,
         ]);
     }
+
     /**
      * Run the database seeds.
      *

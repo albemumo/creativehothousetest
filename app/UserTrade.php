@@ -11,7 +11,7 @@ class UserTrade extends Model
      *
      * @var string
      */
-    protected $table = 'users_trades';
+    protected $table = 'user_trades';
 
     /**
      * The primary key for the entity.
