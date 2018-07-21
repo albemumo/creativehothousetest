@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Coin;
 use App\CoinHistorical;
+use Carbon\Carbon;
 use DateTime;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
@@ -46,10 +47,12 @@ class CoinController extends Controller
         // Getting the start and end dates by url params for database query.
         $start = $request->query('start');
         $end = $request->query('end');
-        if ($start != null && $end != null) {
-            return CoinHistorical::where('coin_id', $coin->id)->whereBetween('snapshot_at', [$start, $end])->get();
-        }
-        return CoinHistorical::where('coin_id', $coin->id)->get();
 
+        if ($start == null || $end == null) {
+            $start = Carbon::now();
+            $end = Carbon::now();
+        }
+
+        return CoinHistorical::where('coin_id', $coin->id)->whereBetween('snapshot_at', [$start, $end])->get();
     }
 }
