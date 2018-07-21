@@ -21,7 +21,7 @@ class CreateUsersTradesTable extends Migration
             $table->foreign('user_id')->references('id')->on('users');
             $table->decimal('amount', 26, 13);
             $table->decimal('price_usd', 26, 13);
-            $table->text('notes');
+            $table->text('notes')->nullable();
             $table->dateTimeTz('traded_at');
             $table->timestampsTz();
         });
