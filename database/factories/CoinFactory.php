@@ -3,13 +3,11 @@
 use Faker\Generator as Faker;
 
 $factory->define(App\Coin::class, function (Faker $faker) {
-    $rank = 1;
-
     return [
         'name' => $faker->name,
         'symbol' => $faker->bothify('#?#'),
         'logo' => null,
-        'rank' => $faker->numberBetween(1, 5000),
+        'rank' => $faker->unique()->numberBetween(1, 5000),
         'price_usd' => $faker->randomFloat(2, 0, 9999999999),
         'price_btc' => $faker->randomFloat(2, 0, 9999999999),
         '24h_volume_usd' => $faker->randomFloat(2, 0, 9999999999),
