@@ -16,11 +16,6 @@ use Illuminate\Http\Request;
 Route::apiResource('coins', 'CoinController');
 Route::get('coins/{id}/historical', 'CoinController@historical');
 
-Route::apiResource('portfolio', 'PortfolioController');
-Route::post('portfolio', 'PortfolioController@store');
-
-
-
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+Route::middleware('auth:api')->group(function () {
+    Route::apiResource('portfolio', 'PortfolioController');
 });
