@@ -31,21 +31,4 @@ class StorePortfolioRequest extends FormRequest
             'traded_at' => 'required|before:' . date('2018-05-03T09:14:39+00:00'),
         ];
     }
-
-    public function response(array $errors)
-    {
-        exit;
-        // Optionally, send a custom response on authorize failure
-        // (default is to just redirect to initial page with errors)
-        //
-        // Can return a response, a view, a redirect, or whatever else
-
-        if ($this->ajax() || $this->wantsJson())
-        {
-            return new JsonResponse($errors, 422);
-        }
-//        return $this->redirector->to('login')
-//            ->withInput($this->except($this->dontFlash))
-//            ->withErrors($errors, $this->errorBag);
-    }
 }
