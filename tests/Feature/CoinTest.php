@@ -13,20 +13,12 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 
 class CoinTest extends TestCase
 {
-
-    // use RefreshDatabase;
-
-//    public function testCoinTableSeed()
-//    {
-//        $this->assertGreaterThan(
-//            0,
-//            Coin::count(),
-//            sprintf('Found [%s] records in database table.', Coin::count())
-//        );
-//    }
+    use RefreshDatabase;
 
     public function testApiCoinIndexOk()
     {
+        factory(Coin::class, 100)->create();
+
         $response = $this->json('GET', '/api/coins');
 
         $response
@@ -44,8 +36,10 @@ class CoinTest extends TestCase
                 'from',
                 'to',
                 'data',
-            ]);
-
+            ])
+        ->assertJson([
+            'total' => 100,
+        ]);
     }
 
     public function testApiCoinShowOk()
@@ -64,7 +58,6 @@ class CoinTest extends TestCase
                 'rank' => $coin->rank,
                 'price_usd' => $coin->price_usd,
                 'price_btc' => $coin->price_btc,
-                // '24h_volume_usd' => $coin->24h_volume_usd,
                 'market_cap_usd' => $coin->market_cap_usd,
                 'available_supply' => $coin->available_supply,
                 'total_supply' => $coin->total_supply,
@@ -86,21 +79,40 @@ class CoinTest extends TestCase
             ]);
     }
 
-//    public function testApiCoinHistoricalOk()
-//    {
-//        $coinHistorical = factory(CoinHistorical::class)->create();
-//
-//        $response = $this->json('GET', '/api/coins/' . $coinHistorical->coin->id . '/historical');
-//        $response
-//            ->assertStatus(200)
-//            ->assertJson([
-//                'id' => $coinHistorical->id,
-//                'coin_id' => $coinHistorical->coin->id,
-//                'price_usd' => $coinHistorical->price_usd,
-//                'snapshot_at' => $coinHistorical->snapshot_at,
-//            ]);
-//
-//    }
+    public function testApiCoinHistoricalOk()
+    {
+        $coinHistorical = factory(CoinHistorical::class)->create();
+
+        $response = $this->json('GET', '/api/coins/' . $coinHistorical->coin->id . '/historical');
+        $response
+            ->assertStatus(200)
+            ->assertJsonFragment([
+                'id' => $coinHistorical->id,
+                'coin_id' => $coinHistorical->coin->id,
+                'snapshot_at' => $coinHistorical->snapshot_at,
+            ]);
+
+    }
+
+    public function testApiCoinHistoricalBetweenDatesOk()
+    {
+        $coinHistorical = factory(CoinHistorical::class)->create();
+
+        $start = new Carbon('now');
+        $start->subYears(100); // Substract years to create large date range.
+
+        $end = new Carbon('now');
+
+        $response = $this->json('GET', '/api/coins/' . $coinHistorical->coin->id . '/historical?start=' . $start . '&end=' . $end);
+        $response
+            ->assertStatus(200)
+            ->assertJsonFragment([
+                'id' => $coinHistorical->id,
+                'coin_id' => $coinHistorical->coin->id,
+                'snapshot_at' => $coinHistorical->snapshot_at,
+            ]);
+
+    }
 
     public function testApiCoinHistoricalError()
     {
