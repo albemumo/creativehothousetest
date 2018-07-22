@@ -1,11 +1,11 @@
 <?php
 
 use App\Coin;
-use Illuminate\Database\Seeder;
 use GuzzleHttp\Client;
+use Illuminate\Database\Seeder;
 
 /**
- * Class CoinsTableSeeder
+ * Class CoinsTableSeeder.
  */
 class CoinsTableSeeder extends Seeder
 {
@@ -18,7 +18,6 @@ class CoinsTableSeeder extends Seeder
      */
     private $totalCryptocurrencies;
 
-
     /**
      * Seed the Coin's table.
      *
@@ -29,17 +28,17 @@ class CoinsTableSeeder extends Seeder
         try {
             $this->client = new Client(['base_uri' => 'https://api.coinmarketcap.com/v2/ticker/']);
 
-            DB::transaction(function() {
+            DB::transaction(function () {
                 $start = 1;
                 $limit = 1;
                 $this->getCurrencies($start, $limit);
-                $this->command->info($this->totalCryptocurrencies . ' Coins founded in CoinMarketCap API.');
+                $this->command->info($this->totalCryptocurrencies.' Coins founded in CoinMarketCap API.');
                 $this->command->info('Coin database insert status:');
 
                 $start = 2;
                 $limit = 50;
                 do {
-                    $this->command->comment($start . ' of ' . $this->totalCryptocurrencies . ' Coins...');
+                    $this->command->comment($start.' of '.$this->totalCryptocurrencies.' Coins...');
                     $this->getCurrencies($start, $limit);
 
                     $start += 50;
@@ -52,14 +51,15 @@ class CoinsTableSeeder extends Seeder
         }
     }
 
-
     /**
      * @param int $start
      * @param int $limit
+     *
      * @throws Exception
      */
-    private function getCurrencies(int $start = 1, int $limit = 1) {
-        $response = $this->client->get('?convert=BTC&start=' . $start . '&limit=' . $limit . '&sort=id');
+    private function getCurrencies(int $start = 1, int $limit = 1)
+    {
+        $response = $this->client->get('?convert=BTC&start='.$start.'&limit='.$limit.'&sort=id');
         $responseBody = $response->getBody();
         $responseArray = json_decode($responseBody, true);
         $responseDataArray = $responseArray['data'];
@@ -74,26 +74,26 @@ class CoinsTableSeeder extends Seeder
         $this->createCoin($responseDataArray);
     }
 
-
     /**
      * @param array|null $currencies
      */
-    private function createCoin(array $currencies = null) {
-        foreach($currencies as $item) {
+    private function createCoin(array $currencies = null)
+    {
+        foreach ($currencies as $item) {
             Coin::create([
-                'name' => $item['name'],
-                'symbol' => $item['symbol'],
-                'logo' => null,
-                'rank' => $item['rank'],
-                'price_usd' => $item['quotes']['USD']['price'],
-                'price_btc' => $item['quotes']['BTC']['price'],
-                '24h_volume_usd' => $item['quotes']['USD']['volume_24h'],
-                'market_cap_usd' => $item['quotes']['USD']['market_cap'],
-                'available_supply' => $item['circulating_supply'],
-                'total_supply' => $item['total_supply'],
-                'percent_change_1h' => $item['quotes']['USD']['percent_change_1h'],
+                'name'               => $item['name'],
+                'symbol'             => $item['symbol'],
+                'logo'               => null,
+                'rank'               => $item['rank'],
+                'price_usd'          => $item['quotes']['USD']['price'],
+                'price_btc'          => $item['quotes']['BTC']['price'],
+                '24h_volume_usd'     => $item['quotes']['USD']['volume_24h'],
+                'market_cap_usd'     => $item['quotes']['USD']['market_cap'],
+                'available_supply'   => $item['circulating_supply'],
+                'total_supply'       => $item['total_supply'],
+                'percent_change_1h'  => $item['quotes']['USD']['percent_change_1h'],
                 'percent_change_24h' => $item['quotes']['USD']['percent_change_24h'],
-                'percent_change_7d' => $item['quotes']['USD']['percent_change_7d'],
+                'percent_change_7d'  => $item['quotes']['USD']['percent_change_7d'],
             ]);
         }
     }

@@ -4,18 +4,13 @@ namespace App\Repositories;
 
 use App\Coin;
 use App\CoinHistorical;
-use App\Http\Resources\CoinHistoricalResource;
-use App\Http\Resources\CoinHistoricalResourceCollection;
 use App\Http\Resources\CoinResource;
 use App\Http\Resources\CoinResourceCollection;
-use App\Http\Resources\UserResource;
-use App\Http\Resources\UserResourceCollection;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
 
 /**
- * Class CoinRepository
- * @package App\Repositories
+ * Class CoinRepository.
  */
 class CoinRepository implements CoinRepositoryInterface
 {
@@ -31,7 +26,8 @@ class CoinRepository implements CoinRepositoryInterface
 
     /**
      * CoinRepository constructor.
-     * @param Coin $coinModel
+     *
+     * @param Coin           $coinModel
      * @param CoinHistorical $coinHistoricalModel
      */
     public function __construct(Coin $coinModel, CoinHistorical $coinHistoricalModel)
@@ -51,6 +47,7 @@ class CoinRepository implements CoinRepositoryInterface
 
     /**
      * @param int $id
+     *
      * @return CoinResource
      */
     public function getByIdOrFail(int $id)
@@ -59,10 +56,10 @@ class CoinRepository implements CoinRepositoryInterface
         // return $this->coinModel->findOrFail($id);
     }
 
-
     /**
      * @param Request $request
-     * @param int $id
+     * @param int     $id
+     *
      * @return \Illuminate\Database\Eloquent\Collection|static[]
      */
     public function getCoinHistoricalBetweenDates(Request $request, int $id)

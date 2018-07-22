@@ -2,13 +2,10 @@
 
 namespace App;
 
-use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Http\Request;
 
 /**
- * Class Coin
- * @package App
+ * Class Coin.
  */
 class Coin extends Model
 {
@@ -25,7 +22,6 @@ class Coin extends Model
      * @var string
      */
     protected $primaryKey = 'id';
-
 
     /**
      * Get the userTrade for the coin.
@@ -46,5 +42,4 @@ class Coin extends Model
     {
         return $this->hasMany('App\CoinHistorical');
     }
-
 }

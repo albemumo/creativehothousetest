@@ -2,13 +2,12 @@
 
 namespace App;
 
-use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Notifications\Notifiable;
 use Laravel\Passport\HasApiTokens;
 
 /**
- * Class User
- * @package App
+ * Class User.
  */
 class User extends Authenticatable
 {
@@ -19,7 +18,6 @@ class User extends Authenticatable
      *
      * @var string
      */
-
     protected $table = 'users';
 
     /**
@@ -47,10 +45,9 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-
     /**
      * Get the userTrade for the user.
-     * 
+     *
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
     public function userTrades()

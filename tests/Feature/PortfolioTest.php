@@ -6,10 +6,8 @@ use App\Coin;
 use App\User;
 use App\UserTrade;
 use Carbon\Carbon;
-use DateTime;
-use Tests\TestCase;
-use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Tests\TestCase;
 
 class PortfolioTest extends TestCase
 {
@@ -25,7 +23,6 @@ class PortfolioTest extends TestCase
 
     public function testApiPortfolioGetOk()
     {
-
         $user = factory(User::class)->create();
         factory(UserTrade::class)->create();
 //        $coin = factory(Coin::class)->create();
@@ -39,7 +36,6 @@ class PortfolioTest extends TestCase
 //        ]);
 
         $response = $this->actingAs($user, 'api')->json('GET', '/api/portfolio');
-
 
         $response
             ->assertStatus(200)
@@ -55,7 +51,7 @@ class PortfolioTest extends TestCase
 //                    'price_usd',
 //                    'notes',
 //                    'traded_at',
-                ]
+                ],
             ]);
     }
 
@@ -93,8 +89,8 @@ class PortfolioTest extends TestCase
         ]);
 
         $response = $this->actingAs($user, 'api')->json('POST', '/api/portfolio', [
-            'coin_id' => 0,
-            'amount' => 'invalid',
+            'coin_id'   => 0,
+            'amount'    => 'invalid',
             'price_usd' => 'invalid',
             'traded_at' => new Carbon('2018-06-03T09:14:39+00:00'),
         ]);
@@ -131,7 +127,6 @@ class PortfolioTest extends TestCase
                 ],
             ],
         ]);
-
     }
 
     public function testApiPortfolioPostOk()
@@ -144,28 +139,25 @@ class PortfolioTest extends TestCase
         // Substract one year to pass before date 2018-05-03T09:14:39+00:00 validation
         $tradedAtSubYear = $tradedAt->modify('-1 year')->format('Y-m-d');
 
-
         $response = $this->actingAs($user, 'api')->json('POST', '/api/portfolio', [
-            'coin_id' => $coin->id,
-            'amount' => $userTrade->amount,
+            'coin_id'   => $coin->id,
+            'amount'    => $userTrade->amount,
             'price_usd' => $userTrade->price_usd,
             'traded_at' => $tradedAtSubYear,
-            'notes' => $userTrade->notes,
+            'notes'     => $userTrade->notes,
         ]);
 
         $response->assertStatus(201);
         $response->assertJson([
             'trade' => [
-                'coin_id' => $coin->id,
-                'amount' => $userTrade->amount,
+                'coin_id'   => $coin->id,
+                'amount'    => $userTrade->amount,
                 'price_usd' => $userTrade->price_usd,
                 'traded_at' => $tradedAtSubYear,
-                'notes' => $userTrade->notes,
-            ]
+                'notes'     => $userTrade->notes,
+            ],
         ]);
     }
-
-
 
     /**
      * A basic test example.

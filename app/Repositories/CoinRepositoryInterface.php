@@ -5,8 +5,7 @@ namespace App\Repositories;
 use Illuminate\Http\Request;
 
 /**
- * Interface CoinRepositoryInterface
- * @package App\Repositories
+ * Interface CoinRepositoryInterface.
  */
 interface CoinRepositoryInterface
 {
@@ -17,13 +16,15 @@ interface CoinRepositoryInterface
 
     /**
      * @param int $id
+     *
      * @return mixed
      */
     public function getByIdOrFail(int $id);
 
     /**
      * @param Request $request
-     * @param int $id
+     * @param int     $id
+     *
      * @return mixed
      */
     public function getCoinHistoricalBetweenDates(Request $request, int $id);

@@ -2,12 +2,9 @@
 
 namespace App\Repositories;
 
-
 /**
- * Interface UserTradeRepositoryInterface
- * @package App\Repositories
+ * Interface UserTradeRepositoryInterface.
  */
 interface UserTradeRepositoryInterface
 {
-
 }

@@ -2,12 +2,10 @@
 
 namespace App\Repositories;
 
-use App\Coin;
 use App\CoinHistorical;
 
 /**
- * Class CoinHistoricalRepository
- * @package App\Repositories
+ * Class CoinHistoricalRepository.
  */
 class CoinHistoricalRepository implements CoinHistoricalRepositoryInterface
 {
@@ -18,6 +16,7 @@ class CoinHistoricalRepository implements CoinHistoricalRepositoryInterface
 
     /**
      * CoinHistoricalRepository constructor.
+     *
      * @param CoinHistorical $coinHistoricalModel
      */
     public function __construct(CoinHistorical $coinHistoricalModel)

@@ -3,7 +3,7 @@
 use Illuminate\Database\Seeder;
 
 /**
- * Class OAuthClientsTableSeeder
+ * Class OAuthClientsTableSeeder.
  */
 class OAuthClientsTableSeeder extends Seeder
 {
@@ -17,5 +17,4 @@ class OAuthClientsTableSeeder extends Seeder
         $this->command->call('passport:client', ['--password' => 'password']);
         $this->command->line('This Client credentials are needed to auth with api.');
     }
-
 }

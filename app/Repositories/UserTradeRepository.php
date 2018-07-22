@@ -5,8 +5,7 @@ namespace App\Repositories;
 use App\UserTrade;
 
 /**
- * Class UserTradeRepository
- * @package App\Repositories
+ * Class UserTradeRepository.
  */
 class UserTradeRepository implements UserTradeRepositoryInterface
 {
@@ -17,6 +16,7 @@ class UserTradeRepository implements UserTradeRepositoryInterface
 
     /**
      * UserTradeRepository constructor.
+     *
      * @param UserTrade $userTradeModel
      */
     public function __construct(UserTrade $userTradeModel)

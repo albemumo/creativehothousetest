@@ -2,13 +2,11 @@
 
 namespace App\Repositories;
 
-
 use App\Http\Resources\UserResource;
 use App\User;
 
 /**
- * Class UserRepository
- * @package App\Repositories
+ * Class UserRepository.
  */
 class UserRepository implements UserRepositoryInterface
 {
@@ -17,9 +15,9 @@ class UserRepository implements UserRepositoryInterface
      */
     protected $userModel;
 
-
     /**
      * UserRepository constructor.
+     *
      * @param User $userModel
      */
     public function __construct(User $userModel)
@@ -29,6 +27,7 @@ class UserRepository implements UserRepositoryInterface
 
     /**
      * @param User $user
+     *
      * @return UserResource
      */
     public function getUserPortfolio(User $user)
