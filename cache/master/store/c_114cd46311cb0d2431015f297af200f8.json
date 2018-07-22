@@ -1,0 +1,146 @@
+{
+    "name": "App\\CoinHistorical",
+    "line": 11,
+    "short_desc": "Class CoinHistorical",
+    "long_desc": "",
+    "hint": null,
+    "tags": {
+        "package": [
+            [
+                "App"
+            ]
+        ]
+    },
+    "namespace": "App",
+    "file": "\/home\/albemumo\/Workspace\/CreativeHotHouse\/blog\/app\/CoinHistorical.php",
+    "relative_file": null,
+    "hash": "3241a4ec10ba29f388612fcb287ed26e97c49d06",
+    "parent": "Illuminate\\Database\\Eloquent\\Model",
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "aliases": {
+        "Model": "Illuminate\\Database\\Eloquent\\Model"
+    },
+    "errors": [],
+    "interfaces": [],
+    "traits": [],
+    "properties": {
+        "table": {
+            "name": "table",
+            "line": 18,
+            "short_desc": "The table associated with the model.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "modifiers": 2,
+            "default": {
+                "nodeType": "Scalar_String",
+                "value": "coin_historicals",
+                "attributes": {
+                    "startLine": 18,
+                    "endLine": 18,
+                    "kind": 1
+                }
+            },
+            "errors": []
+        },
+        "primaryKey": {
+            "name": "primaryKey",
+            "line": 25,
+            "short_desc": "The primary key for the model.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "modifiers": 2,
+            "default": {
+                "nodeType": "Scalar_String",
+                "value": "id",
+                "attributes": {
+                    "startLine": 25,
+                    "endLine": 25,
+                    "kind": 1
+                }
+            },
+            "errors": []
+        },
+        "timestamps": {
+            "name": "timestamps",
+            "line": 32,
+            "short_desc": "Indicates if the model should be timestamped.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "bool",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "modifiers": 1,
+            "default": {
+                "nodeType": "Expr_ConstFetch",
+                "name": {
+                    "nodeType": "Name",
+                    "parts": [
+                        "false"
+                    ],
+                    "attributes": {
+                        "startLine": 32,
+                        "endLine": 32,
+                        "namespacedName": {
+                            "nodeType": "Name_FullyQualified",
+                            "parts": [
+                                "App",
+                                "false"
+                            ],
+                            "attributes": {
+                                "startLine": 32,
+                                "endLine": 32
+                            }
+                        }
+                    }
+                },
+                "attributes": {
+                    "startLine": 32,
+                    "endLine": 32
+                }
+            },
+            "errors": []
+        }
+    },
+    "methods": {
+        "coin": {
+            "name": "coin",
+            "line": 40,
+            "short_desc": "Get the coin that owns the coinHistorical.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Illuminate\\Database\\Eloquent\\Relations\\BelongsTo",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        }
+    },
+    "constants": []
+}

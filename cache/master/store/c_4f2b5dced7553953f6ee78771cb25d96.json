@@ -1,0 +1,94 @@
+{
+    "name": "App\\Repositories\\UserTradeRepository",
+    "line": 11,
+    "short_desc": "Class UserTradeRepository",
+    "long_desc": "",
+    "hint": null,
+    "tags": {
+        "package": [
+            [
+                "App\\Repositories"
+            ]
+        ]
+    },
+    "namespace": "App\\Repositories",
+    "file": "\/home\/albemumo\/Workspace\/CreativeHotHouse\/blog\/app\/Repositories\/UserTradeRepository.php",
+    "relative_file": null,
+    "hash": "883c131de55ed1fd6554c701a62f39a3bb2d7efc",
+    "parent": null,
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "aliases": {
+        "UserTrade": "App\\UserTrade"
+    },
+    "errors": [],
+    "interfaces": {
+        "App\\Repositories\\UserTradeRepositoryInterface": "App\\Repositories\\UserTradeRepositoryInterface"
+    },
+    "traits": [],
+    "properties": {
+        "userTradeModel": {
+            "name": "userTradeModel",
+            "line": 16,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\App\\UserTrade",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "modifiers": 2,
+            "default": null,
+            "errors": []
+        }
+    },
+    "methods": {
+        "__construct": {
+            "name": "__construct",
+            "line": 22,
+            "short_desc": "UserTradeRepository constructor.",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "userTradeModel": {
+                    "name": "userTradeModel",
+                    "line": 22,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\App\\UserTrade",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": {
+                        "nodeType": "Name_FullyQualified",
+                        "parts": [
+                            "App",
+                            "UserTrade"
+                        ],
+                        "attributes": {
+                            "startLine": 22,
+                            "endLine": 22
+                        }
+                    },
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false
+                }
+            }
+        }
+    },
+    "constants": []
+}

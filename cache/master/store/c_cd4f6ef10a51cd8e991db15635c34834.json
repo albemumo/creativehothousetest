@@ -1,0 +1,95 @@
+{
+    "name": "App\\Repositories\\CoinHistoricalRepository",
+    "line": 12,
+    "short_desc": "Class CoinHistoricalRepository",
+    "long_desc": "",
+    "hint": null,
+    "tags": {
+        "package": [
+            [
+                "App\\Repositories"
+            ]
+        ]
+    },
+    "namespace": "App\\Repositories",
+    "file": "\/home\/albemumo\/Workspace\/CreativeHotHouse\/blog\/app\/Repositories\/CoinHistoricalRepository.php",
+    "relative_file": null,
+    "hash": "eba03d500844ca11e09573f1594384d5a19c02d3",
+    "parent": null,
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "aliases": {
+        "Coin": "App\\Coin",
+        "CoinHistorical": "App\\CoinHistorical"
+    },
+    "errors": [],
+    "interfaces": {
+        "App\\Repositories\\CoinHistoricalRepositoryInterface": "App\\Repositories\\CoinHistoricalRepositoryInterface"
+    },
+    "traits": [],
+    "properties": {
+        "coinHistoricalModel": {
+            "name": "coinHistoricalModel",
+            "line": 17,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\App\\CoinHistorical",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "modifiers": 2,
+            "default": null,
+            "errors": []
+        }
+    },
+    "methods": {
+        "__construct": {
+            "name": "__construct",
+            "line": 23,
+            "short_desc": "CoinHistoricalRepository constructor.",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "coinHistoricalModel": {
+                    "name": "coinHistoricalModel",
+                    "line": 23,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\App\\CoinHistorical",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": {
+                        "nodeType": "Name_FullyQualified",
+                        "parts": [
+                            "App",
+                            "CoinHistorical"
+                        ],
+                        "attributes": {
+                            "startLine": 23,
+                            "endLine": 23
+                        }
+                    },
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false
+                }
+            }
+        }
+    },
+    "constants": []
+}

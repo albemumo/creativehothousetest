@@ -1,0 +1,29 @@
+{
+    "name": "App\\Repositories\\UserRepositoryInterface",
+    "line": 10,
+    "short_desc": "Interface UserRepositoryInterface",
+    "long_desc": "",
+    "hint": null,
+    "tags": {
+        "package": [
+            [
+                "App\\Repositories"
+            ]
+        ]
+    },
+    "namespace": "App\\Repositories",
+    "file": "\/home\/albemumo\/Workspace\/CreativeHotHouse\/blog\/app\/Repositories\/UserRepositoryInterface.php",
+    "relative_file": null,
+    "hash": "9017fdb946dae9725b8f46d0838efb73baf57082",
+    "parent": null,
+    "modifiers": null,
+    "is_trait": false,
+    "is_interface": true,
+    "aliases": [],
+    "errors": [],
+    "interfaces": [],
+    "traits": [],
+    "properties": [],
+    "methods": [],
+    "constants": []
+}

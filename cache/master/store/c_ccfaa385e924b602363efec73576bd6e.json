@@ -1,0 +1,29 @@
+{
+    "name": "App\\Repositories\\CoinHistoricalRepositoryInterface",
+    "line": 9,
+    "short_desc": "Interface CoinHistoricalRepositoryInterface",
+    "long_desc": "",
+    "hint": null,
+    "tags": {
+        "package": [
+            [
+                "App\\Repositories"
+            ]
+        ]
+    },
+    "namespace": "App\\Repositories",
+    "file": "\/home\/albemumo\/Workspace\/CreativeHotHouse\/blog\/app\/Repositories\/CoinHistoricalRepositoryInterface.php",
+    "relative_file": null,
+    "hash": "ac6ae1c0345426e32b58b73c0fd2b2654dbc822a",
+    "parent": null,
+    "modifiers": null,
+    "is_trait": false,
+    "is_interface": true,
+    "aliases": [],
+    "errors": [],
+    "interfaces": [],
+    "traits": [],
+    "properties": [],
+    "methods": [],
+    "constants": []
+}
