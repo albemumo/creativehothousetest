@@ -141,7 +141,8 @@ class PortfolioTest extends TestCase
         $userTrade = factory(UserTrade::class)->create();
 
         $tradedAt = $userTrade->traded_at;
-        $tradedAtSubYear = $tradedAt->modify('-1 year')->format('Y-m-d'); // Substract one year to pass before date 2018-05-03T09:14:39+00:00 validation
+        // Substract one year to pass before date 2018-05-03T09:14:39+00:00 validation
+        $tradedAtSubYear = $tradedAt->modify('-1 year')->format('Y-m-d');
 
 
         $response = $this->actingAs($user, 'api')->json('POST', '/api/portfolio', [
@@ -154,12 +155,13 @@ class PortfolioTest extends TestCase
 
         $response->assertStatus(201);
         $response->assertJson([
-            'coin_id' => $coin->id,
-            'user_id' => $user->id,
-            'amount' => $userTrade->amount,
-            'price_usd' => $userTrade->price_usd,
-            'traded_at' => $tradedAtSubYear,
-            'notes' => $userTrade->notes,
+            'trade' => [
+                'coin_id' => $coin->id,
+                'amount' => $userTrade->amount,
+                'price_usd' => $userTrade->price_usd,
+                'traded_at' => $tradedAtSubYear,
+                'notes' => $userTrade->notes,
+            ]
         ]);
     }
 

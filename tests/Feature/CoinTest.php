@@ -51,19 +51,21 @@ class CoinTest extends TestCase
         $response
             ->assertStatus(200)
             ->assertJson([
-                'id' => $coin->id,
-                'name' => $coin->name,
-                'symbol' => $coin->symbol,
-                'logo' => $coin->logo,
-                'rank' => $coin->rank,
-                'price_usd' => $coin->price_usd,
-                'price_btc' => $coin->price_btc,
-                'market_cap_usd' => $coin->market_cap_usd,
-                'available_supply' => $coin->available_supply,
-                'total_supply' => $coin->total_supply,
-                'percent_change_1h' => $coin->percent_change_1h,
-                'percent_change_24h' => $coin->percent_change_24h,
-                'percent_change_7d' => $coin->percent_change_7d,
+                'coin' => [
+                    'id' => $coin->id,
+                    'name' => $coin->name,
+                    'symbol' => $coin->symbol,
+                    'logo' => $coin->logo,
+                    'rank' => $coin->rank,
+                    'price_usd' => $coin->price_usd,
+                    'price_btc' => $coin->price_btc,
+                    'market_cap_usd' => $coin->market_cap_usd,
+                    'available_supply' => $coin->available_supply,
+                    'total_supply' => $coin->total_supply,
+                    'percent_change_1h' => $coin->percent_change_1h,
+                    'percent_change_24h' => $coin->percent_change_24h,
+                    'percent_change_7d' => $coin->percent_change_7d,
+                ]
             ]);
 
     }

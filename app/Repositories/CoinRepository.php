@@ -45,8 +45,8 @@ class CoinRepository implements CoinRepositoryInterface
      */
     public function orderByRankAsc()
     {
-        // return $this->coinModel->orderBy('rank', 'asc')->paginate(25);
-        return new CoinResourceCollection($this->coinModel->orderBy('rank', 'asc')->paginate(25));
+        return $this->coinModel->orderBy('rank', 'asc')->paginate(25);
+        // return new CoinResourceCollection($this->coinModel->orderBy('rank', 'asc')->paginate(25));
     }
 
     /**
