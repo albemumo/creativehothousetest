@@ -1,32 +1,51 @@
 <?php
 
 use App\Coin;
+use App\User;
 use Illuminate\Database\Seeder;
 use GuzzleHttp\Client;
 
+/**
+ * Class UsersTableSeeder
+ */
 class UsersTableSeeder extends Seeder
 {
 
     /**
-     * Run the database seeds.
+     * @var string
+     */
+    private $email = 'creative@hothouse.com';
+    /**
+     * @var string
+     */
+    private $password = 'J8T';
+
+
+    /**
+     * Seed the User's table.
+     *
      * @return void
-     * @throws Exception
      */
     public function run()
     {
-        $user = $this->createUser();
-        $this->command->line($user);
+        $this->createUser();
+
+        $this->command->line('This user is needed to get an authentication code.');
+
+        $this->command->info('Email: ' . $this->email);
+        $this->command->info('Password: ' . $this->password);
     }
 
+    /**
+     * @return $this|\Illuminate\Database\Eloquent\Model
+     */
     private function createUser()
     {
-        DB::transaction(function() {
-            return Coin::create([
-                'name' => 'Creative Hot House User',
-                'email' => 'creative@hothouse.com',
-                'password' => Hash::make('J8T'), // secret
-                'remember_token' => str_random(10),
-            ]);
-        });
+        return User::create([
+            'name' => $this->email,
+            'email' => $this->email,
+            'password' => Hash::make($this->password), // secret
+            'remember_token' => str_random(10),
+        ]);
     }
 }

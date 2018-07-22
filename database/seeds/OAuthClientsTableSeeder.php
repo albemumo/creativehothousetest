@@ -1,7 +1,21 @@
 <?php
+
+use Illuminate\Database\Seeder;
+
 /**
- * Created by PhpStorm.
- * User: albemumo
- * Date: 22/07/18
- * Time: 2:44
+ * Class OAuthClientsTableSeeder
  */
+class OAuthClientsTableSeeder extends Seeder
+{
+    /**
+     * Seed the OAuthClient table.
+     *
+     * @return void
+     */
+    public function run()
+    {
+        $this->command->call('passport:client', ['--password' => 'password']);
+        $this->command->line('This Client credentials are needed to auth with api.');
+    }
+
+}
