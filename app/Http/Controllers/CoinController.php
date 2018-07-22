@@ -2,18 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Coin;
-use App\CoinHistorical;
 use App\Repositories\CoinRepositoryInterface;
-use Carbon\Carbon;
-use DateTime;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\App;
 
 /**
- * Class CoinController
- * @package App\Http\Controllers
+ * Class CoinController.
  */
 class CoinController extends Controller
 {
@@ -24,6 +18,7 @@ class CoinController extends Controller
 
     /**
      * CoinController constructor.
+     *
      * @param CoinRepositoryInterface $coinRepository
      */
     public function __construct(CoinRepositoryInterface $coinRepository)
@@ -44,7 +39,8 @@ class CoinController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param int $id
+     *
      * @return \Illuminate\Database\Eloquent\Collection|Model
      */
     public function show($id)
@@ -52,12 +48,12 @@ class CoinController extends Controller
         return $this->coinRepository->getByIdOrFail($id);
     }
 
-
     /**
      * Display the specified resource historical listing.
      *
      * @param Request $request
-     * @param int $id
+     * @param int     $id
+     *
      * @return mixed
      */
     public function historical(Request $request, int $id)

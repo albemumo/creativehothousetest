@@ -5,11 +5,8 @@ namespace Tests\Feature;
 use App\Coin;
 use App\CoinHistorical;
 use Carbon\Carbon;
-use DateTimeZone;
-use Faker\Provider\DateTime;
-use Tests\TestCase;
-use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Tests\TestCase;
 
 class CoinTest extends TestCase
 {
@@ -46,28 +43,27 @@ class CoinTest extends TestCase
     {
         $coin = factory(Coin::class)->create();
 
-        $response = $this->json('GET', '/api/coins/' . $coin->id);
+        $response = $this->json('GET', '/api/coins/'.$coin->id);
 
         $response
             ->assertStatus(200)
             ->assertJson([
                 'coin' => [
-                    'id' => $coin->id,
-                    'name' => $coin->name,
-                    'symbol' => $coin->symbol,
-                    'logo' => $coin->logo,
-                    'rank' => $coin->rank,
-                    'price_usd' => $coin->price_usd,
-                    'price_btc' => $coin->price_btc,
-                    'market_cap_usd' => $coin->market_cap_usd,
-                    'available_supply' => $coin->available_supply,
-                    'total_supply' => $coin->total_supply,
-                    'percent_change_1h' => $coin->percent_change_1h,
+                    'id'                 => $coin->id,
+                    'name'               => $coin->name,
+                    'symbol'             => $coin->symbol,
+                    'logo'               => $coin->logo,
+                    'rank'               => $coin->rank,
+                    'price_usd'          => $coin->price_usd,
+                    'price_btc'          => $coin->price_btc,
+                    'market_cap_usd'     => $coin->market_cap_usd,
+                    'available_supply'   => $coin->available_supply,
+                    'total_supply'       => $coin->total_supply,
+                    'percent_change_1h'  => $coin->percent_change_1h,
                     'percent_change_24h' => $coin->percent_change_24h,
-                    'percent_change_7d' => $coin->percent_change_7d,
-                ]
+                    'percent_change_7d'  => $coin->percent_change_7d,
+                ],
             ]);
-
     }
 
     public function testApiCoinShowError()
@@ -105,15 +101,14 @@ class CoinTest extends TestCase
 
         $end = new Carbon('now');
 
-        $response = $this->json('GET', '/api/coins/' . $coinHistorical->coin->id . '/historical?start=' . $start . '&end=' . $end);
+        $response = $this->json('GET', '/api/coins/'.$coinHistorical->coin->id.'/historical?start='.$start.'&end='.$end);
         $response
             ->assertStatus(200)
             ->assertJsonFragment([
-                'id' => $coinHistorical->id,
-                'coin_id' => $coinHistorical->coin->id,
+                'id'          => $coinHistorical->id,
+                'coin_id'     => $coinHistorical->coin->id,
                 'snapshot_at' => $coinHistorical->snapshot_at,
             ]);
-
     }
 
     public function testApiCoinHistoricalError()
@@ -126,8 +121,6 @@ class CoinTest extends TestCase
                 'error' => 'App\\Coin {0} not found',
             ]);
     }
-
-
 
     /**
      * A basic test example.

@@ -4,10 +4,8 @@ namespace App\Repositories;
 
 use App\User;
 
-
 /**
- * Interface UserRepositoryInterface
- * @package App\Repositories
+ * Interface UserRepositoryInterface.
  */
 interface UserRepositoryInterface
 {

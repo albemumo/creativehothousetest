@@ -1,16 +1,13 @@
 <?php
 
-use App\Coin;
 use App\User;
 use Illuminate\Database\Seeder;
-use GuzzleHttp\Client;
 
 /**
- * Class UsersTableSeeder
+ * Class UsersTableSeeder.
  */
 class UsersTableSeeder extends Seeder
 {
-
     /**
      * @var string
      */
@@ -19,7 +16,6 @@ class UsersTableSeeder extends Seeder
      * @var string
      */
     private $password = 'J8T';
-
 
     /**
      * Seed the User's table.
@@ -32,8 +28,8 @@ class UsersTableSeeder extends Seeder
 
         $this->command->line('This user is needed to get an authentication code.');
 
-        $this->command->info('Email: ' . $this->email);
-        $this->command->info('Password: ' . $this->password);
+        $this->command->info('Email: '.$this->email);
+        $this->command->info('Password: '.$this->password);
     }
 
     /**
@@ -42,9 +38,9 @@ class UsersTableSeeder extends Seeder
     private function createUser()
     {
         return User::create([
-            'name' => $this->email,
-            'email' => $this->email,
-            'password' => Hash::make($this->password), // secret
+            'name'           => $this->email,
+            'email'          => $this->email,
+            'password'       => Hash::make($this->password), // secret
             'remember_token' => str_random(10),
         ]);
     }

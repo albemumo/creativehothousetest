@@ -10,9 +10,9 @@ $factory->define(App\UserTrade::class, function (Faker $faker) {
         'user_id' => function () {
             return factory(App\User::class)->create()->id;
         },
-        'amount' => $faker->randomFloat(2, 0, 9999999999),
+        'amount'    => $faker->randomFloat(2, 0, 9999999999),
         'price_usd' => $faker->randomFloat(2, 0, 9999999999),
-        'notes' => $faker->text,
+        'notes'     => $faker->text,
         'traded_at' => $faker->dateTime(),
     ];
 });

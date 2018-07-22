@@ -3,10 +3,8 @@
 namespace App\Repositories;
 
 /**
- * Interface CoinHistoricalRepositoryInterface
- * @package App\Repositories
+ * Interface CoinHistoricalRepositoryInterface.
  */
 interface CoinHistoricalRepositoryInterface
 {
-
 }

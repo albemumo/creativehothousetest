@@ -12,7 +12,6 @@ use App\UserTrade;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
-
 class PortfolioController extends Controller
 {
     private $userRepository;
@@ -41,6 +40,7 @@ class PortfolioController extends Controller
      * Store a newly created resource in storage for Auth user.
      *
      * @param StorePortfolioRequest|Request $request
+     *
      * @return UserTradeResource
      */
     public function store(StorePortfolioRequest $request)
@@ -49,12 +49,12 @@ class PortfolioController extends Controller
 
         return new UserTradeResource(
             UserTrade::create([
-                'coin_id' => $request->get('coin_id'),
-                'amount' => $request->get('amount'),
+                'coin_id'   => $request->get('coin_id'),
+                'amount'    => $request->get('amount'),
                 'price_usd' => $request->get('price_usd'),
                 'traded_at' => $request->get('traded_at'),
-                'user_id' => $user->id,
-                'notes' => $request->get('notes'),
+                'user_id'   => $user->id,
+                'notes'     => $request->get('notes'),
             ])
         );
 
@@ -67,5 +67,4 @@ class PortfolioController extends Controller
 //            'notes' => $request->get('notes'),
 //        ]);
     }
-
 }

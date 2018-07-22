@@ -5,8 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 
 /**
- * Class UserTrade
- * @package App
+ * Class UserTrade.
  */
 class UserTrade extends Model
 {

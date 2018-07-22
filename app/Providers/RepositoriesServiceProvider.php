@@ -31,7 +31,7 @@ class RepositoriesServiceProvider extends ServiceProvider
         ]);
 
         $repositories->each(function ($item, $key) {
-            $this->app->bind($item . 'Interface', $item);
+            $this->app->bind($item.'Interface', $item);
         });
 
         // $this->app->bind('App\Repositories\CoinRepositoryInterface', 'App\Repositories\CoinRepository');
