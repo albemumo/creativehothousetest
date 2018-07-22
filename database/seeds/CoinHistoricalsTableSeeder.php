@@ -30,7 +30,7 @@ class CoinHistoricalsTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::transaction(function() {
+//        DB::transaction(function() {
             $coins = \App\Coin::all();
 
             $coins->each(function ($item, $key) {
@@ -51,6 +51,6 @@ class CoinHistoricalsTableSeeder extends Seeder
                 } while ($nextSnapshotAt->gte($dtEnd));
 
             });
-        });
+//        });
     }
 }

@@ -2,6 +2,8 @@
 
 namespace App\Repositories;
 
+use App\User;
+
 
 /**
  * Interface UserRepositoryInterface
@@ -9,5 +11,5 @@ namespace App\Repositories;
  */
 interface UserRepositoryInterface
 {
-
+    public function getUserPortfolio(User $user);
 }

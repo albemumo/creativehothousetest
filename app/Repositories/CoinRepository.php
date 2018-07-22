@@ -4,6 +4,12 @@ namespace App\Repositories;
 
 use App\Coin;
 use App\CoinHistorical;
+use App\Http\Resources\CoinHistoricalResource;
+use App\Http\Resources\CoinHistoricalResourceCollection;
+use App\Http\Resources\CoinResource;
+use App\Http\Resources\CoinResourceCollection;
+use App\Http\Resources\UserResource;
+use App\Http\Resources\UserResourceCollection;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
 
@@ -35,21 +41,24 @@ class CoinRepository implements CoinRepositoryInterface
     }
 
     /**
-     * @return \Illuminate\Contracts\Pagination\LengthAwarePaginator
+     * @return CoinResourceCollection
      */
     public function orderByRankAsc()
     {
-        return $this->coinModel->orderBy('rank', 'asc')->paginate(25);
+        // return $this->coinModel->orderBy('rank', 'asc')->paginate(25);
+        return new CoinResourceCollection($this->coinModel->orderBy('rank', 'asc')->paginate(25));
     }
 
     /**
      * @param int $id
-     * @return \Illuminate\Database\Eloquent\Collection|\Illuminate\Database\Eloquent\Model
+     * @return CoinResource
      */
     public function getByIdOrFail(int $id)
     {
-        return $this->coinModel->findOrFail($id);
+        return new CoinResource($this->coinModel->findOrFail($id));
+        // return $this->coinModel->findOrFail($id);
     }
+
 
     /**
      * @param Request $request

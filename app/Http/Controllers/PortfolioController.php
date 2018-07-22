@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StorePortfolioRequest;
 use App\Http\Resources\UserResource;
+use App\Http\Resources\UserTradeResource;
 use App\Repositories\UserRepositoryInterface;
 use App\Repositories\UserTradeRepositoryInterface;
 use App\User;
@@ -40,20 +41,31 @@ class PortfolioController extends Controller
      * Store a newly created resource in storage for Auth user.
      *
      * @param StorePortfolioRequest|Request $request
-     * @return UserTrade
+     * @return UserTradeResource
      */
     public function store(StorePortfolioRequest $request)
     {
         $user = Auth::user();
 
-        return UserTrade::create([
-            'coin_id' => $request->get('coin_id'),
-            'amount' => $request->get('amount'),
-            'price_usd' => $request->get('price_usd'),
-            'traded_at' => $request->get('traded_at'),
-            'user_id' => $user->id,
-            'notes' => $request->get('notes'),
-        ]);
+        return new UserTradeResource(
+            UserTrade::create([
+                'coin_id' => $request->get('coin_id'),
+                'amount' => $request->get('amount'),
+                'price_usd' => $request->get('price_usd'),
+                'traded_at' => $request->get('traded_at'),
+                'user_id' => $user->id,
+                'notes' => $request->get('notes'),
+            ])
+        );
+
+//        return UserTrade::create([
+//            'coin_id' => $request->get('coin_id'),
+//            'amount' => $request->get('amount'),
+//            'price_usd' => $request->get('price_usd'),
+//            'traded_at' => $request->get('traded_at'),
+//            'user_id' => $user->id,
+//            'notes' => $request->get('notes'),
+//        ]);
     }
 
 }
