@@ -4,14 +4,24 @@ use App\Coin;
 use Illuminate\Database\Seeder;
 use GuzzleHttp\Client;
 
+/**
+ * Class CoinsTableSeeder
+ */
 class CoinsTableSeeder extends Seeder
 {
+    /**
+     * @var
+     */
     private $client;
+    /**
+     * @var
+     */
     private $totalCryptocurrencies;
 
+
     /**
-     * Run the database seeds.
-     * @return void
+     * Seed the Coin's table.
+     *
      * @throws Exception
      */
     public function run()
@@ -19,29 +29,33 @@ class CoinsTableSeeder extends Seeder
         try {
             $this->client = new Client(['base_uri' => 'https://api.coinmarketcap.com/v2/ticker/']);
 
-            $start = 1;
-            $limit = 1;
-            $this->getCurrencies($start, $limit);
-            $this->command->info($this->totalCryptocurrencies . ' Coins founded in CoinMarketCap API.');
-            $this->command->info('Coin database insert status:');
-
-            $start = 2;
-            $limit = 50;
-            do {
-                $this->command->comment($start . ' of ' . $this->totalCryptocurrencies . ' Coins...');
+            DB::transaction(function() {
+                $start = 1;
+                $limit = 1;
                 $this->getCurrencies($start, $limit);
+                $this->command->info($this->totalCryptocurrencies . ' Coins founded in CoinMarketCap API.');
+                $this->command->info('Coin database insert status:');
 
-                $start += 50;
-            } while ($start < $this->totalCryptocurrencies);
+                $start = 2;
+                $limit = 50;
+                do {
+                    $this->command->comment($start . ' of ' . $this->totalCryptocurrencies . ' Coins...');
+                    $this->getCurrencies($start, $limit);
+
+                    $start += 50;
+                } while ($start < $this->totalCryptocurrencies);
+            });
+
             $this->command->info('Coins table seeding finished!');
         } catch (Exception $e) {
             throw new Exception($e->getMessage(), $e->getCode());
         }
     }
 
+
     /**
-     * @param $start
-     * @param $limit
+     * @param int $start
+     * @param int $limit
      * @throws Exception
      */
     private function getCurrencies(int $start = 1, int $limit = 1) {
@@ -60,8 +74,9 @@ class CoinsTableSeeder extends Seeder
         $this->createCoin($responseDataArray);
     }
 
+
     /**
-     * @param $currencies
+     * @param array|null $currencies
      */
     private function createCoin(array $currencies = null) {
         foreach($currencies as $item) {
