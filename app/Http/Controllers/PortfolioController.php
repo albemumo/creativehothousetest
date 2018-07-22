@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StorePortfolioRequest;
 use App\Http\Resources\UserResource;
+use App\Repositories\UserRepositoryInterface;
+use App\Repositories\UserTradeRepositoryInterface;
 use App\User;
 use App\UserTrade;
 use Illuminate\Http\Request;
@@ -12,6 +14,16 @@ use Illuminate\Support\Facades\Auth;
 
 class PortfolioController extends Controller
 {
+    private $userRepository;
+
+    private $userTradeRepository;
+
+    public function __construct(UserRepositoryInterface $userRepository, UserTradeRepositoryInterface $userTradeRepository)
+    {
+        $this->userRepository = $userRepository;
+        $this->userTradeRepository = $userTradeRepository;
+    }
+
     /**
      * Display a listing of the user resource.
      *
@@ -20,7 +32,8 @@ class PortfolioController extends Controller
     public function index()
     {
         $user = Auth::user();
-        return new UserResource(User::findOrFail($user->id));
+
+        return $this->userRepository->getUserPortfolio($user);
     }
 
     /**
@@ -32,6 +45,7 @@ class PortfolioController extends Controller
     public function store(StorePortfolioRequest $request)
     {
         $user = Auth::user();
+
         return UserTrade::create([
             'coin_id' => $request->get('coin_id'),
             'amount' => $request->get('amount'),

@@ -4,6 +4,10 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
+/**
+ * Class CoinHistorical
+ * @package App
+ */
 class CoinHistorical extends Model
 {
     /**
@@ -27,8 +31,11 @@ class CoinHistorical extends Model
      */
     public $timestamps = false;
 
+
     /**
      * Get the coin that owns the coinHistorical.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
     public function coin()
     {

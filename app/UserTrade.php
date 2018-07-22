@@ -4,6 +4,10 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
+/**
+ * Class UserTrade
+ * @package App
+ */
 class UserTrade extends Model
 {
     /**
@@ -29,6 +33,8 @@ class UserTrade extends Model
 
     /**
      * Get the coin that owns the userTrade.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
     public function coin()
     {
@@ -37,6 +43,8 @@ class UserTrade extends Model
 
     /**
      * Get the coin that owns the userTrade.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
     public function user()
     {
