@@ -1,6 +1,6 @@
 <?php
 
-use App\Coin;
+use App\Models\Coin;
 use GuzzleHttp\Client;
 use Illuminate\Database\Seeder;
 
@@ -25,15 +25,25 @@ class CoinsTableSeeder extends Seeder
      */
     public function run()
     {
+        $this->command->line('');
+        $this->command->info('####################################################');
+        $this->command->info('## Running Seed 3/4 ################################');
+        $this->command->info('####################################################');
+        $this->command->line('');
+        $this->command->info('Getting Coins on CoinMarketCap API.');
+
         try {
             $this->client = new Client(['base_uri' => 'https://api.coinmarketcap.com/v2/ticker/']);
 
             DB::transaction(function () {
+
+
                 $start = 1;
                 $limit = 1;
                 $this->getCurrencies($start, $limit);
-                $this->command->info($this->totalCryptocurrencies.' Coins founded in CoinMarketCap API.');
-                $this->command->info('Coin database insert status:');
+                $this->command->info($this->totalCryptocurrencies.' Coins founded.');
+                $this->command->info('Seeding table with coins. It will take a minute approx.');
+                $this->command->info('Coin database insert progress:');
 
                 $start = 2;
                 $limit = 50;
@@ -45,10 +55,12 @@ class CoinsTableSeeder extends Seeder
                 } while ($start < $this->totalCryptocurrencies);
             });
 
-            $this->command->info('Coins table seeding finished!');
         } catch (Exception $e) {
             throw new Exception($e->getMessage(), $e->getCode());
         }
+        $this->command->line('');
+        $this->command->info('Coins table seeding finished!');
+        $this->command->line('');
     }
 
     /**

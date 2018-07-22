@@ -2,7 +2,7 @@
 
 use Faker\Generator as Faker;
 
-$factory->define(App\Coin::class, function (Faker $faker) {
+$factory->define(App\Models\Coin::class, function (Faker $faker) {
     return [
         'name'               => $faker->name,
         'symbol'             => $faker->bothify('#?#'),

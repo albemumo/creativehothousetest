@@ -2,16 +2,25 @@
 
 namespace Tests\Feature;
 
-use App\Coin;
-use App\CoinHistorical;
+use App\Models\Coin;
+use App\Models\CoinHistorical;
 use Carbon\Carbon;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 
+/**
+ * Class CoinTest
+ * @package Tests\Feature
+ */
 class CoinTest extends TestCase
 {
     use RefreshDatabase;
 
+    /**
+     * Test Api Coins Index
+     *
+     * @return void
+     */
     public function testApiCoinIndexOk()
     {
         factory(Coin::class, 100)->create();
@@ -39,6 +48,11 @@ class CoinTest extends TestCase
         ]);
     }
 
+    /**
+     * Test Api Coins Id Show
+     *
+     * @return void
+     */
     public function testApiCoinShowOk()
     {
         $coin = factory(Coin::class)->create();
@@ -66,6 +80,11 @@ class CoinTest extends TestCase
             ]);
     }
 
+    /**
+     * Test Api Coins Id Show Error
+     *
+     * @return void
+     */
     public function testApiCoinShowError()
     {
         $response = $this->json('GET', '/api/coins/0');
@@ -73,25 +92,15 @@ class CoinTest extends TestCase
         $response
             ->assertStatus(404)
             ->assertExactJson([
-                'error' => 'App\\Coin {0} not found',
+                'error' => 'App\\Models\\Coin {0} not found',
             ]);
     }
 
-//    public function testApiCoinHistoricalOk()
-//    {
-//        $coinHistorical = factory(CoinHistorical::class)->create();
-//
-//        $response = $this->json('GET', '/api/coins/' . $coinHistorical->coin->id . '/historical');
-//        $response
-//            ->assertStatus(200)
-//            ->assertJsonFragment([
-//                'id' => $coinHistorical->id,
-//                'coin_id' => $coinHistorical->coin->id,
-//                'snapshot_at' => $coinHistorical->snapshot_at,
-//            ]);
-//
-//    }
-
+    /**
+     * Test Api Coins Historical by Coin Id and Between two dates.
+     *
+     * @return void
+     */
     public function testApiCoinHistoricalBetweenDatesOk()
     {
         $coinHistorical = factory(CoinHistorical::class)->create();
@@ -111,6 +120,11 @@ class CoinTest extends TestCase
             ]);
     }
 
+    /**
+     * Test Api Coins Historical by Coin Id and Between two dates error.
+     *
+     * @return void
+     */
     public function testApiCoinHistoricalError()
     {
         $response = $this->json('GET', '/api/coins/0/historical');
@@ -118,17 +132,7 @@ class CoinTest extends TestCase
         $response
             ->assertStatus(404)
             ->assertExactJson([
-                'error' => 'App\\Coin {0} not found',
+                'error' => 'App\\Models\\Coin {0} not found',
             ]);
-    }
-
-    /**
-     * A basic test example.
-     *
-     * @return void
-     */
-    public function testExample()
-    {
-        $this->assertTrue(true);
     }
 }

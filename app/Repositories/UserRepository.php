@@ -3,7 +3,7 @@
 namespace App\Repositories;
 
 use App\Http\Resources\UserResource;
-use App\User;
+use App\Models\User;
 
 /**
  * Class UserRepository.

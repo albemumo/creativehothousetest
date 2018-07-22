@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -37,6 +37,6 @@ class CoinHistorical extends Model
      */
     public function coin()
     {
-        return $this->belongsTo('App\Coin');
+        return $this->belongsTo('App\Models\Coin');
     }
 }

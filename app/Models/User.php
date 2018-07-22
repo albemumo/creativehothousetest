@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -52,6 +52,6 @@ class User extends Authenticatable
      */
     public function userTrades()
     {
-        return $this->hasMany('App\UserTrade');
+        return $this->hasMany('App\Models\UserTrade');
     }
 }

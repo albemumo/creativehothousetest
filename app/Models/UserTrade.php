@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -37,7 +37,7 @@ class UserTrade extends Model
      */
     public function coin()
     {
-        return $this->belongsTo('App\Coin');
+        return $this->belongsTo('App\Models\Coin');
     }
 
     /**
@@ -47,6 +47,6 @@ class UserTrade extends Model
      */
     public function user()
     {
-        return $this->belongsTo('App\User');
+        return $this->belongsTo('App\Models\User');
     }
 }

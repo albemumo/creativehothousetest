@@ -2,9 +2,9 @@
 
 namespace Tests\Feature;
 
-use App\Coin;
-use App\User;
-use App\UserTrade;
+use App\Models\Coin;
+use App\Models\User;
+use App\Models\UserTrade;
 use Carbon\Carbon;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
@@ -13,6 +13,11 @@ class PortfolioTest extends TestCase
 {
     use RefreshDatabase;
 
+    /**
+     * Test Api Portfolio unauthorized.
+     *
+     * @return void
+     */
     public function testApiPortfolioGetUnauthorized()
     {
         $response = $this->json('GET', '/api/portfolio');
@@ -21,19 +26,15 @@ class PortfolioTest extends TestCase
             ->assertStatus(401);
     }
 
+    /**
+     * Test Api Portfolio.
+     *
+     * @return void
+     */
     public function testApiPortfolioGetOk()
     {
         $user = factory(User::class)->create();
         factory(UserTrade::class)->create();
-//        $coin = factory(Coin::class)->create();
-//        $userTrade = factory(UserTrade::class)->create([
-//            'coin_id' => $coin->id,
-//            'user_id' => $user->id,
-//            'amount' => '100',
-//            'price_usd' => '10.10',
-//            'traded_at' => new Carbon('now'),
-//            'notes' => 'Silent is gold.',
-//        ]);
 
         $response = $this->actingAs($user, 'api')->json('GET', '/api/portfolio');
 
@@ -43,18 +44,15 @@ class PortfolioTest extends TestCase
                 'id',
                 'name',
                 'email',
-                'coins' => [
-//                    'id',
-//                    'coin_id',
-//                    'user_id',
-//                    'amount',
-//                    'price_usd',
-//                    'notes',
-//                    'traded_at',
-                ],
+                'coins' => [],
             ]);
     }
 
+    /**
+     * Test Api Portfolio create UserTrade unauthorized.
+     *
+     * @return void
+     */
     public function testApiPortfolioPostUnauthorized()
     {
         $response = $this->json('POST', '/api/portfolio');
@@ -63,7 +61,12 @@ class PortfolioTest extends TestCase
             ->assertStatus(401);
     }
 
-    public function testApiPortfolioPostValidation()
+    /**
+     * Test Api Portfolio create UserTrade validation required values.
+     *
+     * @return void
+     */
+    public function testApiPortfolioPostValidationRequired()
     {
         $user = factory(User::class)->create();
 
@@ -87,6 +90,17 @@ class PortfolioTest extends TestCase
                 ],
             ],
         ]);
+
+    }
+
+    /**
+     * Test Api Portfolio create UserTrade validation invalid values.
+     *
+     * @return void
+     */
+    public function testApiPortfolioPostValidationInvalid()
+    {
+        $user = factory(User::class)->create();
 
         $response = $this->actingAs($user, 'api')->json('POST', '/api/portfolio', [
             'coin_id'   => 0,
@@ -113,6 +127,16 @@ class PortfolioTest extends TestCase
                 ],
             ],
         ]);
+    }
+
+    /**
+     * Test Api Portfolio create UserTrade validation numeric min values.
+     *
+     * @return void
+     */
+    public function testApiPortfolioPostValidationNumericMin()
+    {
+        $user = factory(User::class)->create();
 
         $response = $this->actingAs($user, 'api')->json('POST', '/api/portfolio', [
             'price_usd' => '-1',
@@ -129,6 +153,11 @@ class PortfolioTest extends TestCase
         ]);
     }
 
+    /**
+     * Test Api Portfolio create UserTrade.
+     *
+     * @return void
+     */
     public function testApiPortfolioPostOk()
     {
         $coin = factory(Coin::class)->create();
@@ -157,15 +186,5 @@ class PortfolioTest extends TestCase
                 'notes'     => $userTrade->notes,
             ],
         ]);
-    }
-
-    /**
-     * A basic test example.
-     *
-     * @return void
-     */
-    public function testExample()
-    {
-        $this->assertTrue(true);
     }
 }

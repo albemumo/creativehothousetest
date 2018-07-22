@@ -74,3 +74,7 @@ Client Secret: 8ebYvziKZK4xQ82gs2KLqYkTmMrfTNHeHcysaaMF
 Password grant client created successfully.
 Client ID: 2
 Client Secret: OZ1lD33M1wjdKfm7N3RBZpp767fech091nWvp0gi
+
+
+php artisan make:provider RiakServiceProvider
+

@@ -2,7 +2,7 @@
 
 namespace App\Repositories;
 
-use App\CoinHistorical;
+use App\Models\CoinHistorical;
 
 /**
  * Class CoinHistoricalRepository.

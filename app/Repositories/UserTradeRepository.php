@@ -2,7 +2,7 @@
 
 namespace App\Repositories;
 
-use App\UserTrade;
+use App\Models\UserTrade;
 
 /**
  * Class UserTradeRepository.

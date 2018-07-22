@@ -1,6 +1,6 @@
 <?php
 
-use App\User;
+use App\Models\User;
 use Illuminate\Database\Seeder;
 
 /**
@@ -24,12 +24,19 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
+        $this->command->line('');
+        $this->command->info('####################################################');
+        $this->command->info('## Running Seed 1/4 ################################');
+        $this->command->info('####################################################');
+        $this->command->line('');
+
         $this->createUser();
 
-        $this->command->line('This user is needed to get an authentication code.');
-
+        $this->command->line('');
         $this->command->info('Email: '.$this->email);
         $this->command->info('Password: '.$this->password);
+        $this->command->warn('Warning! These email and password are needed to access secure zone of API endpoints. Save it if you plan testing api with Postman for example.');
+        $this->command->line('');
     }
 
     /**

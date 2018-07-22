@@ -7,8 +7,8 @@ use App\Http\Resources\UserResource;
 use App\Http\Resources\UserTradeResource;
 use App\Repositories\UserRepositoryInterface;
 use App\Repositories\UserTradeRepositoryInterface;
-use App\User;
-use App\UserTrade;
+use App\Models\User;
+use App\Models\UserTrade;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -57,14 +57,5 @@ class PortfolioController extends Controller
                 'notes'     => $request->get('notes'),
             ])
         );
-
-//        return UserTrade::create([
-//            'coin_id' => $request->get('coin_id'),
-//            'amount' => $request->get('amount'),
-//            'price_usd' => $request->get('price_usd'),
-//            'traded_at' => $request->get('traded_at'),
-//            'user_id' => $user->id,
-//            'notes' => $request->get('notes'),
-//        ]);
     }
 }

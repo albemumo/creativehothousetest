@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -30,7 +30,7 @@ class Coin extends Model
      */
     public function userTrades()
     {
-        return $this->hasMany('App\UserTrade');
+        return $this->hasMany('App\Models\UserTrade');
     }
 
     /**
@@ -40,6 +40,6 @@ class Coin extends Model
      */
     public function coinHistoricals()
     {
-        return $this->hasMany('App\CoinHistorical');
+        return $this->hasMany('App\Models\CoinHistorical');
     }
 }
