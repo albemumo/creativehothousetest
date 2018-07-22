@@ -79,20 +79,20 @@ class CoinTest extends TestCase
             ]);
     }
 
-    public function testApiCoinHistoricalOk()
-    {
-        $coinHistorical = factory(CoinHistorical::class)->create();
-
-        $response = $this->json('GET', '/api/coins/' . $coinHistorical->coin->id . '/historical');
-        $response
-            ->assertStatus(200)
-            ->assertJsonFragment([
-                'id' => $coinHistorical->id,
-                'coin_id' => $coinHistorical->coin->id,
-                'snapshot_at' => $coinHistorical->snapshot_at,
-            ]);
-
-    }
+//    public function testApiCoinHistoricalOk()
+//    {
+//        $coinHistorical = factory(CoinHistorical::class)->create();
+//
+//        $response = $this->json('GET', '/api/coins/' . $coinHistorical->coin->id . '/historical');
+//        $response
+//            ->assertStatus(200)
+//            ->assertJsonFragment([
+//                'id' => $coinHistorical->id,
+//                'coin_id' => $coinHistorical->coin->id,
+//                'snapshot_at' => $coinHistorical->snapshot_at,
+//            ]);
+//
+//    }
 
     public function testApiCoinHistoricalBetweenDatesOk()
     {
