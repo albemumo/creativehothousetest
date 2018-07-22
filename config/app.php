@@ -150,6 +150,8 @@ return [
         /*
          * Package Service Providers...
          */
+        Mpociot\ApiDoc\ApiDocGeneratorServiceProvider::class,
+
 
         /*
          * Application Service Providers...
@@ -159,6 +161,11 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+
+        /*
+         * Custom Service Providers
+         */
+        App\Providers\RepositoriesServiceProvider::class,
 
     ],
 
