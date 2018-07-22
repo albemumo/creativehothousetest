@@ -13,9 +13,9 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::apiResource('coins', 'CoinController');
+Route::apiResource('coins', 'CoinController')->only(['index', 'show']);
 Route::get('coins/{id}/historical', 'CoinController@historical');
 
 Route::middleware('auth:api')->group(function () {
-    Route::apiResource('portfolio', 'PortfolioController');
+    Route::apiResource('portfolio', 'PortfolioController')->only(['index', 'store']);
 });
