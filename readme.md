@@ -31,9 +31,8 @@ Installation
 ------------
 
 - Clone the repository `git clone https://albemumo@bitbucket.org/albemumo/creativehothouse.git`
-- Go to the project root.
+- Go to the project root. `cd creativehothouse`
 - Run `composer install` command.
-- Copy .env.example to .env `cp .env.example .env`
 - Create the database schema, user and grant permission to database
 
 ```sql
@@ -45,18 +44,19 @@ CREATE USER 'creativeuser'@'localhost' IDENTIFIED BY 'secret';
 GRANT ALL ON creativehothousetest.* to creativeuser@'localhost' IDENTIFIED BY 'secret';
 FLUSH PRIVILEGES;
 ```
-
+- Copy .env.example to .env `cp .env.example .env`
 - Edit `.env` file in root directory with your MySQL ip, port, database, user and password. Set:
 ```bash
 DB_DATABASE=creativehothousetest
 DB_USERNAME=creativeuser
 DB_PASSWORD=secret
 ```
-- Run `php artisan passport:install` to install passport. Required to access api auth endpoints.
 
-- `php artisan migrate` or `php artisan migrate --force` if you have troubles. 
+- `php artisan migrate` or `php artisan migrate --force` if you have troubles.
 
-- `php artisan:db:seed` (If you want to refresh it `php artisan migrate:refresh --seed`) This seed generates a user and OAuth Client. Save it to access api authorized endpoints.
+- Run `php artisan passport:install --force` to install passport. Required to access api auth endpoints. 
+
+- `php artisan db:seed` (If you want to refresh it `php artisan migrate:refresh --seed`) This seed generates a user and OAuth Client. Save it to access api authorized endpoints.
 NOTE: This command may take several hours to complete. When you arrive to Seed process 4/4 you can wait 1 min and press "control + c" to stop it.
 
 - Run `php artisan key:generate`
