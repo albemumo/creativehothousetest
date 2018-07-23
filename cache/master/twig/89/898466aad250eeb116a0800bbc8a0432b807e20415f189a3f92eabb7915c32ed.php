@@ -11,9 +11,9 @@ class __TwigTemplate_5f47e88b6f6fd57ba851c6ba734aba6eb5bd5113ce1b0c9fef1327ed5bc
 
         $this->source = $this->getSourceContext();
 
-        $this->blocks = array(
-            'body_class' => array($this, 'block_body_class'),
-        );
+        $this->blocks = [
+            'body_class' => [$this, 'block_body_class'],
+        ];
     }
 
     protected function doGetParent(array $context)
@@ -24,7 +24,7 @@ class __TwigTemplate_5f47e88b6f6fd57ba851c6ba734aba6eb5bd5113ce1b0c9fef1327ed5bc
         })()), 'index.twig', 7);
     }
 
-    protected function doDisplay(array $context, array $blocks = array())
+    protected function doDisplay(array $context, array $blocks = [])
     {
         // line 1
         if ((isset($context['has_namespaces']) || array_key_exists('has_namespaces', $context) ? $context['has_namespaces'] : (function () {
@@ -41,7 +41,7 @@ class __TwigTemplate_5f47e88b6f6fd57ba851c6ba734aba6eb5bd5113ce1b0c9fef1327ed5bc
     }
 
     // line 9
-    public function block_body_class($context, array $blocks = array())
+    public function block_body_class($context, array $blocks = [])
     {
         echo 'index';
     }
@@ -58,7 +58,7 @@ class __TwigTemplate_5f47e88b6f6fd57ba851c6ba734aba6eb5bd5113ce1b0c9fef1327ed5bc
 
     public function getDebugInfo()
     {
-        return array(40 => 9,  36 => 7,  33 => 4,  30 => 2,  28 => 1,  22 => 7);
+        return [40 => 9,  36 => 7,  33 => 4,  30 => 2,  28 => 1,  22 => 7];
     }
 
     public function getSourceContext()

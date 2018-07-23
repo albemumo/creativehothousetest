@@ -9,15 +9,14 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 
 /**
- * Class CoinTest
- * @package Tests\Feature
+ * Class CoinTest.
  */
 class CoinTest extends TestCase
 {
     use RefreshDatabase;
 
     /**
-     * Test Api Coins Index
+     * Test Api Coins Index.
      *
      * @return void
      */
@@ -44,7 +43,7 @@ class CoinTest extends TestCase
                 'data' => [
                     [
                         'id',
-                    ]
+                    ],
                 ],
             ])
         ->assertJson([
@@ -53,7 +52,7 @@ class CoinTest extends TestCase
     }
 
     /**
-     * Test Api Coins Id Show
+     * Test Api Coins Id Show.
      *
      * @return void
      */
@@ -86,7 +85,7 @@ class CoinTest extends TestCase
     }
 
     /**
-     * Test Api Coins Id Show Error
+     * Test Api Coins Id Show Error.
      *
      * @return void
      */

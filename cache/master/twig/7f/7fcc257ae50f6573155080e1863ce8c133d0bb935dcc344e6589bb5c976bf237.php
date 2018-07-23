@@ -13,13 +13,13 @@ class __TwigTemplate_af8558454bf22d68823c018c99dbf03f5fe361984974ecf676fe04ebd1c
 
         // line 1
         $this->parent = $this->loadTemplate('layout/layout.twig', 'namespace.twig', 1);
-        $this->blocks = array(
-            'title' => array($this, 'block_title'),
-            'body_class' => array($this, 'block_body_class'),
-            'page_id' => array($this, 'block_page_id'),
-            'below_menu' => array($this, 'block_below_menu'),
-            'page_content' => array($this, 'block_page_content'),
-        );
+        $this->blocks = [
+            'title'        => [$this, 'block_title'],
+            'body_class'   => [$this, 'block_body_class'],
+            'page_id'      => [$this, 'block_page_id'],
+            'below_menu'   => [$this, 'block_below_menu'],
+            'page_content' => [$this, 'block_page_content'],
+        ];
     }
 
     protected function doGetParent(array $context)
@@ -27,7 +27,7 @@ class __TwigTemplate_af8558454bf22d68823c018c99dbf03f5fe361984974ecf676fe04ebd1c
         return 'layout/layout.twig';
     }
 
-    protected function doDisplay(array $context, array $blocks = array())
+    protected function doDisplay(array $context, array $blocks = [])
     {
         // line 2
         $context['__internal_9d65f06ca1cd2f491b7687d17e20dfe726814c2d2c295048bba4146be77b95fe'] = $this->loadTemplate('macros.twig', 'namespace.twig', 2);
@@ -36,7 +36,7 @@ class __TwigTemplate_af8558454bf22d68823c018c99dbf03f5fe361984974ecf676fe04ebd1c
     }
 
     // line 3
-    public function block_title($context, array $blocks = array())
+    public function block_title($context, array $blocks = [])
     {
         echo isset($context['namespace']) || array_key_exists('namespace', $context) ? $context['namespace'] : (function () {
             throw new Twig_Error_Runtime('Variable "namespace" does not exist.', 3, $this->source);
@@ -46,21 +46,21 @@ class __TwigTemplate_af8558454bf22d68823c018c99dbf03f5fe361984974ecf676fe04ebd1c
     }
 
     // line 4
-    public function block_body_class($context, array $blocks = array())
+    public function block_body_class($context, array $blocks = [])
     {
         echo 'namespace';
     }
 
     // line 5
-    public function block_page_id($context, array $blocks = array())
+    public function block_page_id($context, array $blocks = [])
     {
         echo twig_escape_filter($this->env, ('namespace:'.twig_replace_filter((isset($context['namespace']) || array_key_exists('namespace', $context) ? $context['namespace'] : (function () {
             throw new Twig_Error_Runtime('Variable "namespace" does not exist.', 5, $this->source);
-        })()), array('\\' => '_'))), 'html', null, true);
+        })()), ['\\' => '_'])), 'html', null, true);
     }
 
     // line 7
-    public function block_below_menu($context, array $blocks = array())
+    public function block_below_menu($context, array $blocks = [])
     {
         // line 8
         echo '    <div class="namespace-breadcrumbs">
@@ -78,7 +78,7 @@ class __TwigTemplate_af8558454bf22d68823c018c99dbf03f5fe361984974ecf676fe04ebd1c
     }
 
     // line 16
-    public function block_page_content($context, array $blocks = array())
+    public function block_page_content($context, array $blocks = [])
     {
         // line 17
         echo '
@@ -183,7 +183,7 @@ class __TwigTemplate_af8558454bf22d68823c018c99dbf03f5fe361984974ecf676fe04ebd1c
 
     public function getDebugInfo()
     {
-        return array(146 => 43,  141 => 41,  138 => 40,  136 => 39,  133 => 38,  128 => 36,  125 => 35,  123 => 34,  120 => 33,  115 => 31,  112 => 30,  110 => 29,  107 => 28,  103 => 26,  94 => 25,  90 => 23,  88 => 22,  82 => 19,  78 => 17,  75 => 16,  67 => 11,  62 => 8,  59 => 7,  53 => 5,  47 => 4,  39 => 3,  35 => 1,  33 => 2,  15 => 1);
+        return [146 => 43,  141 => 41,  138 => 40,  136 => 39,  133 => 38,  128 => 36,  125 => 35,  123 => 34,  120 => 33,  115 => 31,  112 => 30,  110 => 29,  107 => 28,  103 => 26,  94 => 25,  90 => 23,  88 => 22,  82 => 19,  78 => 17,  75 => 16,  67 => 11,  62 => 8,  59 => 7,  53 => 5,  47 => 4,  39 => 3,  35 => 1,  33 => 2,  15 => 1];
     }
 
     public function getSourceContext()

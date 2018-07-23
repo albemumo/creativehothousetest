@@ -23,7 +23,8 @@ interface CoinRepositoryInterface
 
     /**
      * @param array|Request $request
-     * @param int $id
+     * @param int           $id
+     *
      * @return mixed
      */
     public function getCoinHistoricalBetweenDates(array $request, int $id);

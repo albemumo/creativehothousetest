@@ -13,17 +13,17 @@ class __TwigTemplate_6e981bbd031f7d05654c26d4231d5d4f280a402095071d193ea8ee2d986
 
         $this->parent = false;
 
-        $this->blocks = array(
-            'title' => array($this, 'block_title'),
-            'head' => array($this, 'block_head'),
-            'html' => array($this, 'block_html'),
-            'body_class' => array($this, 'block_body_class'),
-            'page_id' => array($this, 'block_page_id'),
-            'content' => array($this, 'block_content'),
-        );
+        $this->blocks = [
+            'title'      => [$this, 'block_title'],
+            'head'       => [$this, 'block_head'],
+            'html'       => [$this, 'block_html'],
+            'body_class' => [$this, 'block_body_class'],
+            'page_id'    => [$this, 'block_page_id'],
+            'content'    => [$this, 'block_content'],
+        ];
     }
 
-    protected function doDisplay(array $context, array $blocks = array())
+    protected function doDisplay(array $context, array $blocks = [])
     {
         // line 1
         echo '<!DOCTYPE html>
@@ -45,12 +45,12 @@ class __TwigTemplate_6e981bbd031f7d05654c26d4231d5d4f280a402095071d193ea8ee2d986
         // line 21
         if (twig_get_attribute($this->env, $this->source, (isset($context['project']) || array_key_exists('project', $context) ? $context['project'] : (function () {
             throw new Twig_Error_Runtime('Variable "project" does not exist.', 21, $this->source);
-        })()), 'config', array(0 => 'favicon'), 'method')) {
+        })()), 'config', [0 => 'favicon'], 'method')) {
             // line 22
             echo '        <link rel="shortcut icon" href="';
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context['project']) || array_key_exists('project', $context) ? $context['project'] : (function () {
                 throw new Twig_Error_Runtime('Variable "project" does not exist.', 22, $this->source);
-            })()), 'config', array(0 => 'favicon'), 'method'), 'html', null, true);
+            })()), 'config', [0 => 'favicon'], 'method'), 'html', null, true);
             echo '" />
     ';
         }
@@ -60,12 +60,12 @@ class __TwigTemplate_6e981bbd031f7d05654c26d4231d5d4f280a402095071d193ea8ee2d986
         // line 25
         if (twig_get_attribute($this->env, $this->source, (isset($context['project']) || array_key_exists('project', $context) ? $context['project'] : (function () {
             throw new Twig_Error_Runtime('Variable "project" does not exist.', 25, $this->source);
-        })()), 'config', array(0 => 'base_url'), 'method')) {
+        })()), 'config', [0 => 'base_url'], 'method')) {
             // line 26
             $context['_parent'] = $context;
             $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context['project']) || array_key_exists('project', $context) ? $context['project'] : (function () {
                 throw new Twig_Error_Runtime('Variable "project" does not exist.', 26, $this->source);
-            })()), 'versions', array()));
+            })()), 'versions', []));
             foreach ($context['_seq'] as $context['_key'] => $context['version']) {
                 // line 27
                 echo '<link rel="search"
@@ -74,13 +74,13 @@ class __TwigTemplate_6e981bbd031f7d05654c26d4231d5d4f280a402095071d193ea8ee2d986
                 // line 29
                 echo twig_escape_filter($this->env, twig_replace_filter(twig_get_attribute($this->env, $this->source, (isset($context['project']) || array_key_exists('project', $context) ? $context['project'] : (function () {
                     throw new Twig_Error_Runtime('Variable "project" does not exist.', 29, $this->source);
-                })()), 'config', array(0 => 'base_url'), 'method'), array('%version%' => $context['version'])), 'html', null, true);
+                })()), 'config', [0 => 'base_url'], 'method'), ['%version%' => $context['version']]), 'html', null, true);
                 echo '/opensearch.xml"
                   title="';
                 // line 30
                 echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context['project']) || array_key_exists('project', $context) ? $context['project'] : (function () {
                     throw new Twig_Error_Runtime('Variable "project" does not exist.', 30, $this->source);
-                })()), 'config', array(0 => 'title'), 'method'), 'html', null, true);
+                })()), 'config', [0 => 'title'], 'method'), 'html', null, true);
                 echo ' (';
                 echo twig_escape_filter($this->env, $context['version'], 'html', null, true);
                 echo ')" />
@@ -103,15 +103,15 @@ class __TwigTemplate_6e981bbd031f7d05654c26d4231d5d4f280a402095071d193ea8ee2d986
     }
 
     // line 6
-    public function block_title($context, array $blocks = array())
+    public function block_title($context, array $blocks = [])
     {
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context['project']) || array_key_exists('project', $context) ? $context['project'] : (function () {
             throw new Twig_Error_Runtime('Variable "project" does not exist.', 6, $this->source);
-        })()), 'config', array(0 => 'title'), 'method'), 'html', null, true);
+        })()), 'config', [0 => 'title'], 'method'), 'html', null, true);
     }
 
     // line 8
-    public function block_head($context, array $blocks = array())
+    public function block_head($context, array $blocks = [])
     {
         // line 9
         echo '        <link rel="stylesheet" type="text/css" href="';
@@ -148,7 +148,7 @@ class __TwigTemplate_6e981bbd031f7d05654c26d4231d5d4f280a402095071d193ea8ee2d986
     }
 
     // line 35
-    public function block_html($context, array $blocks = array())
+    public function block_html($context, array $blocks = [])
     {
         // line 36
         echo '    <body id="';
@@ -169,18 +169,18 @@ class __TwigTemplate_6e981bbd031f7d05654c26d4231d5d4f280a402095071d193ea8ee2d986
     }
 
     // line 36
-    public function block_body_class($context, array $blocks = array())
+    public function block_body_class($context, array $blocks = [])
     {
         echo '';
     }
 
-    public function block_page_id($context, array $blocks = array())
+    public function block_page_id($context, array $blocks = [])
     {
         echo '';
     }
 
     // line 37
-    public function block_content($context, array $blocks = array())
+    public function block_content($context, array $blocks = [])
     {
         echo '';
     }
@@ -197,7 +197,7 @@ class __TwigTemplate_6e981bbd031f7d05654c26d4231d5d4f280a402095071d193ea8ee2d986
 
     public function getDebugInfo()
     {
-        return array(167 => 37,  156 => 36,  151 => 38,  149 => 37,  140 => 36,  137 => 35,  128 => 15,  124 => 14,  120 => 13,  116 => 12,  112 => 11,  108 => 10,  103 => 9,  100 => 8,  94 => 6,  88 => 40,  86 => 35,  82 => 33,  71 => 30,  67 => 29,  63 => 27,  59 => 26,  57 => 25,  54 => 24,  48 => 22,  46 => 21,  43 => 20,  41 => 8,  36 => 6,  29 => 1);
+        return [167 => 37,  156 => 36,  151 => 38,  149 => 37,  140 => 36,  137 => 35,  128 => 15,  124 => 14,  120 => 13,  116 => 12,  112 => 11,  108 => 10,  103 => 9,  100 => 8,  94 => 6,  88 => 40,  86 => 35,  82 => 33,  71 => 30,  67 => 29,  63 => 27,  59 => 26,  57 => 25,  54 => 24,  48 => 22,  46 => 21,  43 => 20,  41 => 8,  36 => 6,  29 => 1];
     }
 
     public function getSourceContext()

@@ -2,10 +2,9 @@
 
 namespace App\Repositories;
 
+use App\Http\Resources\CoinResource;
 use App\Models\Coin;
 use App\Models\CoinHistorical;
-use App\Http\Resources\CoinResource;
-use App\Http\Resources\CoinResourceCollection;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
 
@@ -56,8 +55,10 @@ class CoinRepository implements CoinRepositoryInterface
 
     /**
      * @param array $betweenDates
-     * @param int $id
+     * @param int   $id
+     *
      * @return \Illuminate\Database\Eloquent\Collection|mixed|static[]
+     *
      * @internal param Request $request
      */
     public function getCoinHistoricalBetweenDates(array $betweenDates, int $id)

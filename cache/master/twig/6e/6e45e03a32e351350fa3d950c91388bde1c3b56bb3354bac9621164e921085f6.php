@@ -13,11 +13,11 @@ class __TwigTemplate_8bc3586a474c366241ebe0cec6e17975ff285b88206115c335747e40eb0
 
         // line 1
         $this->parent = $this->loadTemplate('layout/layout.twig', 'namespaces.twig', 1);
-        $this->blocks = array(
-            'title' => array($this, 'block_title'),
-            'body_class' => array($this, 'block_body_class'),
-            'page_content' => array($this, 'block_page_content'),
-        );
+        $this->blocks = [
+            'title'        => [$this, 'block_title'],
+            'body_class'   => [$this, 'block_body_class'],
+            'page_content' => [$this, 'block_page_content'],
+        ];
     }
 
     protected function doGetParent(array $context)
@@ -25,26 +25,26 @@ class __TwigTemplate_8bc3586a474c366241ebe0cec6e17975ff285b88206115c335747e40eb0
         return 'layout/layout.twig';
     }
 
-    protected function doDisplay(array $context, array $blocks = array())
+    protected function doDisplay(array $context, array $blocks = [])
     {
         $this->parent->display($context, array_merge($this->blocks, $blocks));
     }
 
     // line 2
-    public function block_title($context, array $blocks = array())
+    public function block_title($context, array $blocks = [])
     {
         echo 'Namespaces | ';
         $this->displayParentBlock('title', $context, $blocks);
     }
 
     // line 3
-    public function block_body_class($context, array $blocks = array())
+    public function block_body_class($context, array $blocks = [])
     {
         echo 'namespaces';
     }
 
     // line 5
-    public function block_page_content($context, array $blocks = array())
+    public function block_page_content($context, array $blocks = [])
     {
         // line 6
         echo '    <div class="page-header">
@@ -136,7 +136,7 @@ class __TwigTemplate_8bc3586a474c366241ebe0cec6e17975ff285b88206115c335747e40eb0
 
     public function getDebugInfo()
     {
-        return array(109 => 28,  103 => 24,  92 => 22,  89 => 21,  87 => 20,  82 => 18,  79 => 17,  74 => 16,  71 => 15,  68 => 14,  63 => 13,  61 => 12,  58 => 11,  56 => 10,  50 => 6,  47 => 5,  41 => 3,  34 => 2,  15 => 1);
+        return [109 => 28,  103 => 24,  92 => 22,  89 => 21,  87 => 20,  82 => 18,  79 => 17,  74 => 16,  71 => 15,  68 => 14,  63 => 13,  61 => 12,  58 => 11,  56 => 10,  50 => 6,  47 => 5,  41 => 3,  34 => 2,  15 => 1];
     }
 
     public function getSourceContext()

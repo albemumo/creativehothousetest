@@ -13,12 +13,12 @@ class __TwigTemplate_a64a348ca15f65c0277d53444160c9e9e0dc9015b6f49a4861eaea69bb9
 
         // line 1
         $this->parent = $this->loadTemplate('layout/layout.twig', 'search.twig', 1);
-        $this->blocks = array(
-            'title' => array($this, 'block_title'),
-            'body_class' => array($this, 'block_body_class'),
-            'page_content' => array($this, 'block_page_content'),
-            'js_search' => array($this, 'block_js_search'),
-        );
+        $this->blocks = [
+            'title'        => [$this, 'block_title'],
+            'body_class'   => [$this, 'block_body_class'],
+            'page_content' => [$this, 'block_page_content'],
+            'js_search'    => [$this, 'block_js_search'],
+        ];
     }
 
     protected function doGetParent(array $context)
@@ -26,7 +26,7 @@ class __TwigTemplate_a64a348ca15f65c0277d53444160c9e9e0dc9015b6f49a4861eaea69bb9
         return 'layout/layout.twig';
     }
 
-    protected function doDisplay(array $context, array $blocks = array())
+    protected function doDisplay(array $context, array $blocks = [])
     {
         // line 2
         $context['__internal_72f03427b9c1316d474c1ac0b5fd5ffbe925de68be81d0d1ae2c79ad19a6de69'] = $this->loadTemplate('macros.twig', 'search.twig', 2);
@@ -35,20 +35,20 @@ class __TwigTemplate_a64a348ca15f65c0277d53444160c9e9e0dc9015b6f49a4861eaea69bb9
     }
 
     // line 3
-    public function block_title($context, array $blocks = array())
+    public function block_title($context, array $blocks = [])
     {
         echo 'Search | ';
         $this->displayParentBlock('title', $context, $blocks);
     }
 
     // line 4
-    public function block_body_class($context, array $blocks = array())
+    public function block_body_class($context, array $blocks = [])
     {
         echo 'search-page';
     }
 
     // line 6
-    public function block_page_content($context, array $blocks = array())
+    public function block_page_content($context, array $blocks = [])
     {
         // line 7
         echo '
@@ -87,7 +87,7 @@ class __TwigTemplate_a64a348ca15f65c0277d53444160c9e9e0dc9015b6f49a4861eaea69bb9
     }
 
     // line 35
-    public function block_js_search($context, array $blocks = array())
+    public function block_js_search($context, array $blocks = [])
     {
         // line 36
         echo "    <script type=\"text/javascript\">
@@ -157,7 +157,7 @@ class __TwigTemplate_a64a348ca15f65c0277d53444160c9e9e0dc9015b6f49a4861eaea69bb9
 
     public function getDebugInfo()
     {
-        return array(93 => 36,  90 => 35,  83 => 31,  66 => 17,  54 => 7,  51 => 6,  45 => 4,  38 => 3,  34 => 1,  32 => 2,  15 => 1);
+        return [93 => 36,  90 => 35,  83 => 31,  66 => 17,  54 => 7,  51 => 6,  45 => 4,  38 => 3,  34 => 1,  32 => 2,  15 => 1];
     }
 
     public function getSourceContext()

@@ -57,7 +57,6 @@ class CoinsTableSeeder extends Seeder
                     $start += 50;
                 } while ($start < $this->totalCryptocurrencies);
             });
-
         } catch (Exception $e) {
             throw new Exception($e->getMessage(), $e->getCode());
         }
