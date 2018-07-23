@@ -36,8 +36,11 @@ class CoinsTableSeeder extends Seeder
             $this->client = new Client(['base_uri' => 'https://api.coinmarketcap.com/v2/ticker/']);
 
             DB::transaction(function () {
-
-
+                /**
+                 * Starting first getting only one coin, Because CoinMarket returns the total coins in the response.
+                 * So i get do this to get the total cryptocurrencies number to iterate.
+                 * Also i insert the first coin i get.
+                 */
                 $start = 1;
                 $limit = 1;
                 $this->getCurrencies($start, $limit);
@@ -71,18 +74,26 @@ class CoinsTableSeeder extends Seeder
      */
     private function getCurrencies(int $start = 1, int $limit = 1)
     {
+        // Doing the query
         $response = $this->client->get('?convert=BTC&start='.$start.'&limit='.$limit.'&sort=id');
+        // Getting the body of the response
         $responseBody = $response->getBody();
+        // Decoding response to associative array
         $responseArray = json_decode($responseBody, true);
-        $responseDataArray = $responseArray['data'];
+        // And response code
         $responseStatusCode = $response->getStatusCode();
 
+        // If response is major than 300 an error has occurred.
         if ($responseStatusCode > 300) {
             throw new Exception('Error getting currencies.', $responseStatusCode);
         }
 
+        $responseDataArray = $responseArray['data'];
+
+        // Setting the total of coins to variable
         $this->totalCryptocurrencies = $responseArray['metadata']['num_cryptocurrencies'];
 
+        // Creating coin
         $this->createCoin($responseDataArray);
     }
 
