@@ -65,7 +65,7 @@ class CoinRepository implements CoinRepositoryInterface
     {
         $coin = $this->coinModel->findOrFail($id);
 
-        if (!isset($betweenDates['start']) || !isset(betweenDates['end'])) {
+        if (!isset($betweenDates['start']) || !isset($betweenDates['end'])) {
             $betweenDates['start'] = Carbon::now();
             $betweenDates['end'] = Carbon::now();
         }
