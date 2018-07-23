@@ -40,9 +40,7 @@ class CoinHistoricalsTableSeeder extends Seeder
         $this->command->info('This command may take several hours to complete. If you want to stop the execution press "control + c".');
         $this->command->warn('Warning: If you cancel it very quickly, probably only have historicals of coin id 1');
 
-        $coins = Coin::all();
-
-        $coins->each(function ($item, $key) {
+        Coin::all()->each(function ($item) {
             $priceUsd = $item->price_usd;
             $snapshotAt = $item->created_at;
 
@@ -56,7 +54,12 @@ class CoinHistoricalsTableSeeder extends Seeder
                 // Creating fake records every hour.
                 $nextSnapshotAt = $snapshotAt->subHour();
 
-                // This calc the coin price variation.
+                /**
+                 * This calc the coin price variation.
+                 * This calc returns a number within -100 and 100.
+                 * For exemple the results are between -0,01 and 0,01.
+                 * We multiply this value with priceUsd and have the 'realistic' price variation.
+                 */
                 $nextPriceUsdVariation = (rand(-100, 100) / 10000) * $priceUsd;
 
                 // And finally we plus the nextPrice with newPriceUsdVariation

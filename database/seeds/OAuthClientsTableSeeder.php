@@ -25,6 +25,5 @@ class OAuthClientsTableSeeder extends Seeder
 
         $this->command->warn('Warning! These Client ID and Client Secret are needed to access secure zone of API endpoints. Save it if you plan testing api with Postman for example.');
         $this->command->line('');
-
     }
 }
