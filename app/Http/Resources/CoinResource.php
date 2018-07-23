@@ -24,6 +24,7 @@ class CoinResource extends JsonResource
                 'rank'               => $this->rank,
                 'price_usd'          => $this->price_usd,
                 'price_btc'          => $this->price_btc,
+                '24h_volume_usd'     => $this->{'24h_volume_usd'},
                 'market_cap_usd'     => $this->market_cap_usd,
                 'available_supply'   => $this->available_supply,
                 'total_supply'       => $this->total_supply,

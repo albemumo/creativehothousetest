@@ -55,18 +55,18 @@ class CoinRepository implements CoinRepositoryInterface
     }
 
     /**
-     * @param Request $request
+     * @param array $betweenDates
      * @param int $id
-     *
      * @return \Illuminate\Database\Eloquent\Collection|mixed|static[]
+     * @internal param Request $request
      */
-    public function getCoinHistoricalBetweenDates(Request $request, int $id)
+    public function getCoinHistoricalBetweenDates(array $betweenDates, int $id)
     {
         $coin = $this->coinModel->findOrFail($id);
 
         // Getting the start and end dates by url params for database query.
-        $start = $request->query('start');
-        $end = $request->query('end');
+        $start = $betweenDates['start'];
+        $end = $betweenDates['end'];
 
         if ($start == null || $end == null) {
             $start = Carbon::now();

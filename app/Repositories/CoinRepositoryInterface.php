@@ -22,10 +22,9 @@ interface CoinRepositoryInterface
     public function getByIdOrFail(int $id);
 
     /**
-     * @param Request $request
-     * @param int     $id
-     *
+     * @param array|Request $request
+     * @param int $id
      * @return mixed
      */
-    public function getCoinHistoricalBetweenDates(Request $request, int $id);
+    public function getCoinHistoricalBetweenDates(array $request, int $id);
 }
