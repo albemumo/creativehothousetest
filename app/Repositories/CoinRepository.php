@@ -65,14 +65,13 @@ class CoinRepository implements CoinRepositoryInterface
     {
         $coin = $this->coinModel->findOrFail($id);
 
+        if (!isset($betweenDates['start']) || !isset(betweenDates['end'])) {
+            $betweenDates['start'] = Carbon::now();
+            $betweenDates['end'] = Carbon::now();
+        }
         // Getting the start and end dates by url params for database query.
         $start = $betweenDates['start'];
         $end = $betweenDates['end'];
-
-        if ($start == null || $end == null) {
-            $start = Carbon::now();
-            $end = Carbon::now();
-        }
 
         return $this->coinHistoricalModel->where('coin_id', $coin->id)->whereBetween('snapshot_at', [$start, $end])->get();
     }
