@@ -19,6 +19,7 @@ class CoinController extends Controller
 
     /**
      * CoinController constructor.
+     *
      * @param CoinRepository $coinRepository
      */
     public function __construct(CoinRepository $coinRepository)

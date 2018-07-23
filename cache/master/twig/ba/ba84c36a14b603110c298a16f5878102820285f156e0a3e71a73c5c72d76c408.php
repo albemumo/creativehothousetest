@@ -13,11 +13,11 @@ class __TwigTemplate_a3a5c32116b6c3d31ba2f033e4e5dbf425fcdbff5ca224a8b688a4bf84c
 
         // line 1
         $this->parent = $this->loadTemplate('layout/layout.twig', 'traits.twig', 1);
-        $this->blocks = array(
-            'title' => array($this, 'block_title'),
-            'body_class' => array($this, 'block_body_class'),
-            'page_content' => array($this, 'block_page_content'),
-        );
+        $this->blocks = [
+            'title'        => [$this, 'block_title'],
+            'body_class'   => [$this, 'block_body_class'],
+            'page_content' => [$this, 'block_page_content'],
+        ];
     }
 
     protected function doGetParent(array $context)
@@ -25,7 +25,7 @@ class __TwigTemplate_a3a5c32116b6c3d31ba2f033e4e5dbf425fcdbff5ca224a8b688a4bf84c
         return 'layout/layout.twig';
     }
 
-    protected function doDisplay(array $context, array $blocks = array())
+    protected function doDisplay(array $context, array $blocks = [])
     {
         // line 2
         $context['__internal_060648be7509ffdc1cd8971040d81681617caedbed26e93d4857f5f46e9abcc4'] = $this->loadTemplate('macros.twig', 'traits.twig', 2);
@@ -34,20 +34,20 @@ class __TwigTemplate_a3a5c32116b6c3d31ba2f033e4e5dbf425fcdbff5ca224a8b688a4bf84c
     }
 
     // line 3
-    public function block_title($context, array $blocks = array())
+    public function block_title($context, array $blocks = [])
     {
         echo 'Traits | ';
         $this->displayParentBlock('title', $context, $blocks);
     }
 
     // line 4
-    public function block_body_class($context, array $blocks = array())
+    public function block_body_class($context, array $blocks = [])
     {
         echo 'traits';
     }
 
     // line 6
-    public function block_page_content($context, array $blocks = array())
+    public function block_page_content($context, array $blocks = [])
     {
         // line 7
         echo '    <div class="page-header">
@@ -64,7 +64,7 @@ class __TwigTemplate_a3a5c32116b6c3d31ba2f033e4e5dbf425fcdbff5ca224a8b688a4bf84c
         foreach ($context['_seq'] as $context['_key'] => $context['class']) {
             // line 13
             echo '            ';
-            if (twig_get_attribute($this->env, $this->source, $context['class'], 'trait', array())) {
+            if (twig_get_attribute($this->env, $this->source, $context['class'], 'trait', [])) {
                 // line 14
                 echo '                <div class="row">
                     <div class="col-md-6">
@@ -76,7 +76,7 @@ class __TwigTemplate_a3a5c32116b6c3d31ba2f033e4e5dbf425fcdbff5ca224a8b688a4bf84c
                     <div class="col-md-6">
                         ';
                 // line 19
-                echo $this->extensions['Sami\Renderer\TwigExtension']->parseDesc($context, twig_get_attribute($this->env, $this->source, $context['class'], 'shortdesc', array()), $context['class']);
+                echo $this->extensions['Sami\Renderer\TwigExtension']->parseDesc($context, twig_get_attribute($this->env, $this->source, $context['class'], 'shortdesc', []), $context['class']);
                 echo '
                     </div>
                 </div>
@@ -105,7 +105,7 @@ class __TwigTemplate_a3a5c32116b6c3d31ba2f033e4e5dbf425fcdbff5ca224a8b688a4bf84c
 
     public function getDebugInfo()
     {
-        return array(90 => 24,  84 => 23,  77 => 19,  71 => 16,  67 => 14,  64 => 13,  60 => 12,  53 => 7,  50 => 6,  44 => 4,  37 => 3,  33 => 1,  31 => 2,  15 => 1);
+        return [90 => 24,  84 => 23,  77 => 19,  71 => 16,  67 => 14,  64 => 13,  60 => 12,  53 => 7,  50 => 6,  44 => 4,  37 => 3,  33 => 1,  31 => 2,  15 => 1];
     }
 
     public function getSourceContext()

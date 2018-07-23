@@ -13,15 +13,15 @@ class __TwigTemplate_bb4cd3044c5c0424c621ebbdd426fca98c0838e3cd8f03b8a40471779ce
 
         // line 1
         $this->parent = $this->loadTemplate('layout/base.twig', 'layout/layout.twig', 1);
-        $this->blocks = array(
-            'content' => array($this, 'block_content'),
-            'below_menu' => array($this, 'block_below_menu'),
-            'page_content' => array($this, 'block_page_content'),
-            'menu' => array($this, 'block_menu'),
-            'leftnav' => array($this, 'block_leftnav'),
-            'control_panel' => array($this, 'block_control_panel'),
-            'footer' => array($this, 'block_footer'),
-        );
+        $this->blocks = [
+            'content'       => [$this, 'block_content'],
+            'below_menu'    => [$this, 'block_below_menu'],
+            'page_content'  => [$this, 'block_page_content'],
+            'menu'          => [$this, 'block_menu'],
+            'leftnav'       => [$this, 'block_leftnav'],
+            'control_panel' => [$this, 'block_control_panel'],
+            'footer'        => [$this, 'block_footer'],
+        ];
     }
 
     protected function doGetParent(array $context)
@@ -29,13 +29,13 @@ class __TwigTemplate_bb4cd3044c5c0424c621ebbdd426fca98c0838e3cd8f03b8a40471779ce
         return 'layout/base.twig';
     }
 
-    protected function doDisplay(array $context, array $blocks = array())
+    protected function doDisplay(array $context, array $blocks = [])
     {
         $this->parent->display($context, array_merge($this->blocks, $blocks));
     }
 
     // line 3
-    public function block_content($context, array $blocks = array())
+    public function block_content($context, array $blocks = [])
     {
         // line 4
         echo '    <div id="content">
@@ -74,19 +74,19 @@ class __TwigTemplate_bb4cd3044c5c0424c621ebbdd426fca98c0838e3cd8f03b8a40471779ce
     }
 
     // line 11
-    public function block_below_menu($context, array $blocks = array())
+    public function block_below_menu($context, array $blocks = [])
     {
         echo '';
     }
 
     // line 13
-    public function block_page_content($context, array $blocks = array())
+    public function block_page_content($context, array $blocks = [])
     {
         echo '';
     }
 
     // line 20
-    public function block_menu($context, array $blocks = array())
+    public function block_menu($context, array $blocks = [])
     {
         // line 21
         echo '    <nav id="site-nav" class="navbar navbar-default" role="navigation">
@@ -104,7 +104,7 @@ class __TwigTemplate_bb4cd3044c5c0424c621ebbdd426fca98c0838e3cd8f03b8a40471779ce
         echo '">';
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context['project']) || array_key_exists('project', $context) ? $context['project'] : (function () {
             throw new Twig_Error_Runtime('Variable "project" does not exist.', 30, $this->source);
-        })()), 'config', array(0 => 'title'), 'method'), 'html', null, true);
+        })()), 'config', [0 => 'title'], 'method'), 'html', null, true);
         echo '</a>
             </div>
             <div class="collapse navbar-collapse" id="navbar-elements">
@@ -148,7 +148,7 @@ class __TwigTemplate_bb4cd3044c5c0424c621ebbdd426fca98c0838e3cd8f03b8a40471779ce
     }
 
     // line 48
-    public function block_leftnav($context, array $blocks = array())
+    public function block_leftnav($context, array $blocks = [])
     {
         // line 49
         echo '    <div id="api-tree"></div>
@@ -156,7 +156,7 @@ class __TwigTemplate_bb4cd3044c5c0424c621ebbdd426fca98c0838e3cd8f03b8a40471779ce
     }
 
     // line 52
-    public function block_control_panel($context, array $blocks = array())
+    public function block_control_panel($context, array $blocks = [])
     {
         // line 53
         echo '    <div id="control-panel">
@@ -164,7 +164,7 @@ class __TwigTemplate_bb4cd3044c5c0424c621ebbdd426fca98c0838e3cd8f03b8a40471779ce
         // line 54
         if ((twig_length_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context['project']) || array_key_exists('project', $context) ? $context['project'] : (function () {
             throw new Twig_Error_Runtime('Variable "project" does not exist.', 54, $this->source);
-        })()), 'versions', array())) > 1)) {
+        })()), 'versions', [])) > 1)) {
             // line 55
             echo '            <form action="#" method="GET">
                 <select id="version-switcher" name="version">
@@ -173,7 +173,7 @@ class __TwigTemplate_bb4cd3044c5c0424c621ebbdd426fca98c0838e3cd8f03b8a40471779ce
             $context['_parent'] = $context;
             $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context['project']) || array_key_exists('project', $context) ? $context['project'] : (function () {
                 throw new Twig_Error_Runtime('Variable "project" does not exist.', 57, $this->source);
-            })()), 'versions', array()));
+            })()), 'versions', []));
             foreach ($context['_seq'] as $context['_key'] => $context['version']) {
                 // line 58
                 echo '                        <option value="';
@@ -181,7 +181,7 @@ class __TwigTemplate_bb4cd3044c5c0424c621ebbdd426fca98c0838e3cd8f03b8a40471779ce
                 echo '" data-version="';
                 echo twig_escape_filter($this->env, $context['version'], 'html', null, true);
                 echo '">';
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context['version'], 'longname', array()), 'html', null, true);
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context['version'], 'longname', []), 'html', null, true);
                 echo '</option>
                     ';
             }
@@ -212,7 +212,7 @@ class __TwigTemplate_bb4cd3044c5c0424c621ebbdd426fca98c0838e3cd8f03b8a40471779ce
     }
 
     // line 76
-    public function block_footer($context, array $blocks = array())
+    public function block_footer($context, array $blocks = [])
     {
         // line 77
         echo '    <div id="footer">
@@ -233,7 +233,7 @@ class __TwigTemplate_bb4cd3044c5c0424c621ebbdd426fca98c0838e3cd8f03b8a40471779ce
 
     public function getDebugInfo()
     {
-        return array(210 => 77,  207 => 76,  194 => 66,  189 => 63,  184 => 60,  171 => 58,  167 => 57,  163 => 55,  161 => 54,  158 => 53,  155 => 52,  150 => 49,  147 => 48,  137 => 41,  133 => 40,  129 => 39,  124 => 38,  118 => 36,  116 => 35,  112 => 34,  103 => 30,  92 => 21,  89 => 20,  83 => 13,  77 => 11,  69 => 15,  66 => 14,  64 => 13,  61 => 12,  59 => 11,  55 => 10,  49 => 7,  45 => 6,  41 => 4,  38 => 3,  15 => 1);
+        return [210 => 77,  207 => 76,  194 => 66,  189 => 63,  184 => 60,  171 => 58,  167 => 57,  163 => 55,  161 => 54,  158 => 53,  155 => 52,  150 => 49,  147 => 48,  137 => 41,  133 => 40,  129 => 39,  124 => 38,  118 => 36,  116 => 35,  112 => 34,  103 => 30,  92 => 21,  89 => 20,  83 => 13,  77 => 11,  69 => 15,  66 => 14,  64 => 13,  61 => 12,  59 => 11,  55 => 10,  49 => 7,  45 => 6,  41 => 4,  38 => 3,  15 => 1];
     }
 
     public function getSourceContext()

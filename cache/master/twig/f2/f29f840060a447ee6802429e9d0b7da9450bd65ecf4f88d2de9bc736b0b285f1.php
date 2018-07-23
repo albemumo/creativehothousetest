@@ -13,11 +13,11 @@ class __TwigTemplate_b2e1e02b442020f403090da08e4d68e3bb4e5361d125a44bd1d45311e19
 
         // line 1
         $this->parent = $this->loadTemplate('layout/layout.twig', 'classes.twig', 1);
-        $this->blocks = array(
-            'title' => array($this, 'block_title'),
-            'body_class' => array($this, 'block_body_class'),
-            'page_content' => array($this, 'block_page_content'),
-        );
+        $this->blocks = [
+            'title'        => [$this, 'block_title'],
+            'body_class'   => [$this, 'block_body_class'],
+            'page_content' => [$this, 'block_page_content'],
+        ];
     }
 
     protected function doGetParent(array $context)
@@ -25,7 +25,7 @@ class __TwigTemplate_b2e1e02b442020f403090da08e4d68e3bb4e5361d125a44bd1d45311e19
         return 'layout/layout.twig';
     }
 
-    protected function doDisplay(array $context, array $blocks = array())
+    protected function doDisplay(array $context, array $blocks = [])
     {
         // line 2
         $context['__internal_5747de775099ca1573a9239014f06279bf6550ed8d5063a539786e256e049215'] = $this->loadTemplate('macros.twig', 'classes.twig', 2);
@@ -34,20 +34,20 @@ class __TwigTemplate_b2e1e02b442020f403090da08e4d68e3bb4e5361d125a44bd1d45311e19
     }
 
     // line 3
-    public function block_title($context, array $blocks = array())
+    public function block_title($context, array $blocks = [])
     {
         echo 'All Classes | ';
         $this->displayParentBlock('title', $context, $blocks);
     }
 
     // line 4
-    public function block_body_class($context, array $blocks = array())
+    public function block_body_class($context, array $blocks = [])
     {
         echo 'classes';
     }
 
     // line 6
-    public function block_page_content($context, array $blocks = array())
+    public function block_page_content($context, array $blocks = [])
     {
         // line 7
         echo '    <div class="page-header">
@@ -75,7 +75,7 @@ class __TwigTemplate_b2e1e02b442020f403090da08e4d68e3bb4e5361d125a44bd1d45311e19
 
     public function getDebugInfo()
     {
-        return array(59 => 11,  53 => 7,  50 => 6,  44 => 4,  37 => 3,  33 => 1,  31 => 2,  15 => 1);
+        return [59 => 11,  53 => 7,  50 => 6,  44 => 4,  37 => 3,  33 => 1,  31 => 2,  15 => 1];
     }
 
     public function getSourceContext()
