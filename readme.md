@@ -1,4 +1,5 @@
 [![StyleCI](https://github.styleci.io/repos/142002060/shield?branch=master)](https://github.styleci.io/repos/142002060)
+[![Build Status](https://travis-ci.org/albemumo/creativehothousetest.svg?branch=master)](https://travis-ci.org/albemumo/creativehothousetest)
 
 Creative HotHouse Backend Test
 ------------------------------
