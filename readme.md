@@ -1,3 +1,5 @@
+[![StyleCI](https://github.styleci.io/repos/142002060/shield?branch=master)](https://github.styleci.io/repos/142002060)
+
 Creative HotHouse Backend Test
 ------------------------------
 
