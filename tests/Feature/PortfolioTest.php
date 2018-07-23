@@ -186,5 +186,15 @@ class PortfolioTest extends TestCase
                 'notes'     => $userTrade->notes,
             ],
         ]);
+
+        $userTradeTable = new UserTrade();
+        $this->assertDatabaseHas($userTradeTable->getTable(), [
+            'user_id'   => $user->id,
+            'coin_id'   => $coin->id,
+            'amount'    => $userTrade->amount,
+            'price_usd' => $userTrade->price_usd,
+            'traded_at' => $tradedAtSubYear,
+            'notes'     => $userTrade->notes,
+        ]);
     }
 }

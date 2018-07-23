@@ -41,7 +41,11 @@ class CoinTest extends TestCase
                 'path',
                 'from',
                 'to',
-                'data',
+                'data' => [
+                    [
+                        'id',
+                    ]
+                ],
             ])
         ->assertJson([
             'total' => 100,
@@ -70,6 +74,7 @@ class CoinTest extends TestCase
                     'rank'               => $coin->rank,
                     'price_usd'          => $coin->price_usd,
                     'price_btc'          => $coin->price_btc,
+                    '24h_volume_usd'     => $coin->{'24h_volume_usd'},
                     'market_cap_usd'     => $coin->market_cap_usd,
                     'available_supply'   => $coin->available_supply,
                     'total_supply'       => $coin->total_supply,
@@ -92,7 +97,7 @@ class CoinTest extends TestCase
         $response
             ->assertStatus(404)
             ->assertExactJson([
-                'error' => 'App\\Models\\Coin {0} not found',
+                'error' => Coin::class.' {0} not found',
             ]);
     }
 
@@ -132,7 +137,7 @@ class CoinTest extends TestCase
         $response
             ->assertStatus(404)
             ->assertExactJson([
-                'error' => 'App\\Models\\Coin {0} not found',
+                'error' => Coin::class.' {0} not found',
             ]);
     }
 }
