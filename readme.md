@@ -73,15 +73,6 @@ Running Tests
 To run tests execute the next command inside project root folder: (When you run tests the database table are truncated)
 - `./vendor/bin/phpunit`
 
-Roadmap
--------
-- Add SSL to secure data travel.
-- Add laradock for guarantee the application runs as expected and be more easy to install.
-- Do more advanced folder structure to separate the logic of the application. For example, create subfolder Coin to organize Models, Repositories and Resources of Coin code and do the same with other models.
-- Create a Repository superclass and extend the modelRepositories from it. With this superclass we can create generical methods like find(), getAll(), to reuse more code...
-- Move all Api Controllers to App\Http\Controllers\Api namespace
-- JWT.   
-
 Documentation
 -------------
 This project provides a documentation for the code and API. You can access it after project is installed.
@@ -99,15 +90,18 @@ External libraries imported with composer
 - Laravel Apidoc
 - Passport
 
-Other things
-------------
+Roadmap
+-------
+- Add SSL to secure data travel.
+- Add laradock for guarantee the application runs as expected and be more easy to install.
+- Do more advanced folder structure to separate the logic of the application. For example, create subfolder Coin to organize Models, Repositories and Resources of Coin code and do the same with other models.
+- Create a Repository superclass and extend the modelRepositories from it. With this superclass we can create generical methods like find(), getAll(), to reuse more code...
+- Move all Api Controllers to App\Http\Controllers\Api namespace
+- JWT.   
+
+Considerations
+--------------
 - I'm working in Linux so by default the database driver is MariaDB. Because of this i must declare in `app\Providers\AppServiceProvider.php` a default varchar length. `Schema::defaultStringLength(191);`
 - This project uses OAuth2 to authenticate users.
 - At root folder you have a Postman Collection to import. The file is called `Creative Hot House.postman_collection.json`
 
-
-
-
-
-
-composer require laravel/passport
