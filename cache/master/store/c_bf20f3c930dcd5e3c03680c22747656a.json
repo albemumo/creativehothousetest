@@ -1,20 +1,14 @@
 {
     "name": "App\\Repositories\\UserTradeRepositoryInterface",
-    "line": 10,
-    "short_desc": "Interface UserTradeRepositoryInterface",
+    "line": 8,
+    "short_desc": "Interface UserTradeRepositoryInterface.",
     "long_desc": "",
     "hint": null,
-    "tags": {
-        "package": [
-            [
-                "App\\Repositories"
-            ]
-        ]
-    },
+    "tags": [],
     "namespace": "App\\Repositories",
     "file": "\/home\/albemumo\/Workspace\/CreativeHotHouse\/blog\/app\/Repositories\/UserTradeRepositoryInterface.php",
     "relative_file": null,
-    "hash": "a97b6c314aa8af178945ce8c82bd8b6151ec6169",
+    "hash": "6df999e06a73a52738dee51e81017b58ba06559a",
     "parent": null,
     "modifiers": null,
     "is_trait": false,

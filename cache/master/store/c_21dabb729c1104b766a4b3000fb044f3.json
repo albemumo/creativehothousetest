@@ -8,14 +8,14 @@
     "namespace": "App\\Providers",
     "file": "\/home\/albemumo\/Workspace\/CreativeHotHouse\/blog\/app\/Providers\/EventServiceProvider.php",
     "relative_file": null,
-    "hash": "94b2d414825acea8b99de301e864a232bbecfe96",
+    "hash": "5a9ffff47d8b09477b256bd2ac9f5164333a0927",
     "parent": "Illuminate\\Foundation\\Support\\Providers\\EventServiceProvider",
     "modifiers": 0,
     "is_trait": false,
     "is_interface": false,
     "aliases": {
-        "Event": "Illuminate\\Support\\Facades\\Event",
-        "ServiceProvider": "Illuminate\\Foundation\\Support\\Providers\\EventServiceProvider"
+        "ServiceProvider": "Illuminate\\Foundation\\Support\\Providers\\EventServiceProvider",
+        "Event": "Illuminate\\Support\\Facades\\Event"
     },
     "errors": [],
     "interfaces": [],

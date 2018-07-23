@@ -1,6 +1,6 @@
 {
     "name": "App\\Providers\\AuthServiceProvider",
-    "line": 9,
+    "line": 8,
     "short_desc": "",
     "long_desc": "",
     "hint": null,
@@ -8,13 +8,12 @@
     "namespace": "App\\Providers",
     "file": "\/home\/albemumo\/Workspace\/CreativeHotHouse\/blog\/app\/Providers\/AuthServiceProvider.php",
     "relative_file": null,
-    "hash": "ae47e1f50839e0685622571698c79f395648cada",
+    "hash": "73c86f531687d85ce7bf6af638fff73c9104933b",
     "parent": "Illuminate\\Foundation\\Support\\Providers\\AuthServiceProvider",
     "modifiers": 0,
     "is_trait": false,
     "is_interface": false,
     "aliases": {
-        "Gate": "Illuminate\\Support\\Facades\\Gate",
         "ServiceProvider": "Illuminate\\Foundation\\Support\\Providers\\AuthServiceProvider",
         "Passport": "Laravel\\Passport\\Passport"
     },
@@ -24,7 +23,7 @@
     "properties": {
         "policies": {
             "name": "policies",
-            "line": 16,
+            "line": 15,
             "short_desc": "The policy mappings for the application.",
             "long_desc": "",
             "hint": [
@@ -45,8 +44,8 @@
                             "nodeType": "Scalar_String",
                             "value": "App\\Model",
                             "attributes": {
-                                "startLine": 17,
-                                "endLine": 17,
+                                "startLine": 16,
+                                "endLine": 16,
                                 "kind": 1
                             }
                         },
@@ -54,21 +53,21 @@
                             "nodeType": "Scalar_String",
                             "value": "App\\Policies\\ModelPolicy",
                             "attributes": {
-                                "startLine": 17,
-                                "endLine": 17,
+                                "startLine": 16,
+                                "endLine": 16,
                                 "kind": 1
                             }
                         },
                         "byRef": false,
                         "attributes": {
-                            "startLine": 17,
-                            "endLine": 17
+                            "startLine": 16,
+                            "endLine": 16
                         }
                     }
                 ],
                 "attributes": {
-                    "startLine": 16,
-                    "endLine": 18,
+                    "startLine": 15,
+                    "endLine": 17,
                     "kind": 2
                 }
             },
@@ -78,7 +77,7 @@
     "methods": {
         "boot": {
             "name": "boot",
-            "line": 25,
+            "line": 24,
             "short_desc": "Register any authentication \/ authorization services.",
             "long_desc": "",
             "hint": [

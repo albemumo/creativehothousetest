@@ -8,7 +8,7 @@
     "namespace": "App\\Http\\Resources",
     "file": "\/home\/albemumo\/Workspace\/CreativeHotHouse\/blog\/app\/Http\/Resources\/UserResource.php",
     "relative_file": null,
-    "hash": "84927c3ea9483dabf95b967d4166b97a9b67a31f",
+    "hash": "741d72c54e8af0b0603ac360f8d6a133120a6391",
     "parent": "Illuminate\\Http\\Resources\\Json\\JsonResource",
     "modifiers": 0,
     "is_trait": false,
@@ -23,7 +23,7 @@
     "methods": {
         "toArray": {
             "name": "toArray",
-            "line": 15,
+            "line": 16,
             "short_desc": "Transform the resource into an array.",
             "long_desc": "",
             "hint": [
@@ -41,7 +41,7 @@
             "parameters": {
                 "request": {
                     "name": "request",
-                    "line": 15,
+                    "line": 16,
                     "short_desc": "",
                     "long_desc": null,
                     "hint": [

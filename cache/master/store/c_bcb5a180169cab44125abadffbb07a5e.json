@@ -8,7 +8,7 @@
     "namespace": "App\\Providers",
     "file": "\/home\/albemumo\/Workspace\/CreativeHotHouse\/blog\/app\/Providers\/RepositoriesServiceProvider.php",
     "relative_file": null,
-    "hash": "d29234f8e8ac248a3b8e39369aa57cbf5851afa5",
+    "hash": "da2c5c7fe79d130ad09d774fc224ef1865cc4e7f",
     "parent": "Illuminate\\Support\\ServiceProvider",
     "modifiers": 0,
     "is_trait": false,

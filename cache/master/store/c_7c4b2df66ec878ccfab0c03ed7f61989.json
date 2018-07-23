@@ -1,27 +1,21 @@
 {
-    "name": "App\\User",
-    "line": 13,
-    "short_desc": "Class User",
+    "name": "App\\Models\\User",
+    "line": 12,
+    "short_desc": "Class User.",
     "long_desc": "",
     "hint": null,
-    "tags": {
-        "package": [
-            [
-                "App"
-            ]
-        ]
-    },
-    "namespace": "App",
-    "file": "\/home\/albemumo\/Workspace\/CreativeHotHouse\/blog\/app\/User.php",
+    "tags": [],
+    "namespace": "App\\Models",
+    "file": "\/home\/albemumo\/Workspace\/CreativeHotHouse\/blog\/app\/Models\/User.php",
     "relative_file": null,
-    "hash": "076af04abd74055a79af96d9d01a13cff64cd1d2",
+    "hash": "90125f52a820e0078fe74b40123c110fc8605408",
     "parent": "Illuminate\\Foundation\\Auth\\User",
     "modifiers": 0,
     "is_trait": false,
     "is_interface": false,
     "aliases": {
-        "Notifiable": "Illuminate\\Notifications\\Notifiable",
         "Authenticatable": "Illuminate\\Foundation\\Auth\\User",
+        "Notifiable": "Illuminate\\Notifications\\Notifiable",
         "HasApiTokens": "Laravel\\Passport\\HasApiTokens"
     },
     "errors": [],
@@ -33,7 +27,7 @@
     "properties": {
         "table": {
             "name": "table",
-            "line": 23,
+            "line": 21,
             "short_desc": "The table associated with the model.",
             "long_desc": "",
             "hint": [
@@ -49,8 +43,8 @@
                 "nodeType": "Scalar_String",
                 "value": "users",
                 "attributes": {
-                    "startLine": 23,
-                    "endLine": 23,
+                    "startLine": 21,
+                    "endLine": 21,
                     "kind": 1
                 }
             },
@@ -58,7 +52,7 @@
         },
         "primaryKey": {
             "name": "primaryKey",
-            "line": 30,
+            "line": 28,
             "short_desc": "The primary key for the model.",
             "long_desc": "",
             "hint": [
@@ -74,8 +68,8 @@
                 "nodeType": "Scalar_String",
                 "value": "id",
                 "attributes": {
-                    "startLine": 30,
-                    "endLine": 30,
+                    "startLine": 28,
+                    "endLine": 28,
                     "kind": 1
                 }
             },
@@ -83,7 +77,7 @@
         },
         "fillable": {
             "name": "fillable",
-            "line": 37,
+            "line": 35,
             "short_desc": "The attributes that are mass assignable.",
             "long_desc": "",
             "hint": [
@@ -105,15 +99,15 @@
                             "nodeType": "Scalar_String",
                             "value": "name",
                             "attributes": {
-                                "startLine": 38,
-                                "endLine": 38,
+                                "startLine": 36,
+                                "endLine": 36,
                                 "kind": 1
                             }
                         },
                         "byRef": false,
                         "attributes": {
-                            "startLine": 38,
-                            "endLine": 38
+                            "startLine": 36,
+                            "endLine": 36
                         }
                     },
                     {
@@ -123,15 +117,15 @@
                             "nodeType": "Scalar_String",
                             "value": "email",
                             "attributes": {
-                                "startLine": 38,
-                                "endLine": 38,
+                                "startLine": 36,
+                                "endLine": 36,
                                 "kind": 1
                             }
                         },
                         "byRef": false,
                         "attributes": {
-                            "startLine": 38,
-                            "endLine": 38
+                            "startLine": 36,
+                            "endLine": 36
                         }
                     },
                     {
@@ -141,21 +135,21 @@
                             "nodeType": "Scalar_String",
                             "value": "password",
                             "attributes": {
-                                "startLine": 38,
-                                "endLine": 38,
+                                "startLine": 36,
+                                "endLine": 36,
                                 "kind": 1
                             }
                         },
                         "byRef": false,
                         "attributes": {
-                            "startLine": 38,
-                            "endLine": 38
+                            "startLine": 36,
+                            "endLine": 36
                         }
                     }
                 ],
                 "attributes": {
-                    "startLine": 37,
-                    "endLine": 39,
+                    "startLine": 35,
+                    "endLine": 37,
                     "kind": 2
                 }
             },
@@ -163,7 +157,7 @@
         },
         "hidden": {
             "name": "hidden",
-            "line": 46,
+            "line": 44,
             "short_desc": "The attributes that should be hidden for arrays.",
             "long_desc": "",
             "hint": [
@@ -185,15 +179,15 @@
                             "nodeType": "Scalar_String",
                             "value": "password",
                             "attributes": {
-                                "startLine": 47,
-                                "endLine": 47,
+                                "startLine": 45,
+                                "endLine": 45,
                                 "kind": 1
                             }
                         },
                         "byRef": false,
                         "attributes": {
-                            "startLine": 47,
-                            "endLine": 47
+                            "startLine": 45,
+                            "endLine": 45
                         }
                     },
                     {
@@ -203,21 +197,21 @@
                             "nodeType": "Scalar_String",
                             "value": "remember_token",
                             "attributes": {
-                                "startLine": 47,
-                                "endLine": 47,
+                                "startLine": 45,
+                                "endLine": 45,
                                 "kind": 1
                             }
                         },
                         "byRef": false,
                         "attributes": {
-                            "startLine": 47,
-                            "endLine": 47
+                            "startLine": 45,
+                            "endLine": 45
                         }
                     }
                 ],
                 "attributes": {
-                    "startLine": 46,
-                    "endLine": 48,
+                    "startLine": 44,
+                    "endLine": 46,
                     "kind": 2
                 }
             },
@@ -227,7 +221,7 @@
     "methods": {
         "userTrades": {
             "name": "userTrades",
-            "line": 56,
+            "line": 53,
             "short_desc": "Get the userTrade for the user.",
             "long_desc": "",
             "hint": [

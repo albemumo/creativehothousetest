@@ -1,20 +1,14 @@
 {
-    "name": "App\\UserTrade",
-    "line": 11,
-    "short_desc": "Class UserTrade",
+    "name": "App\\Models\\UserTrade",
+    "line": 10,
+    "short_desc": "Class UserTrade.",
     "long_desc": "",
     "hint": null,
-    "tags": {
-        "package": [
-            [
-                "App"
-            ]
-        ]
-    },
-    "namespace": "App",
-    "file": "\/home\/albemumo\/Workspace\/CreativeHotHouse\/blog\/app\/UserTrade.php",
+    "tags": [],
+    "namespace": "App\\Models",
+    "file": "\/home\/albemumo\/Workspace\/CreativeHotHouse\/blog\/app\/Models\/UserTrade.php",
     "relative_file": null,
-    "hash": "1b0e2c319b041053cb0b81cd7da828a2571a8164",
+    "hash": "dfa168901c481d83a0da30837da8582a0f060eb6",
     "parent": "Illuminate\\Database\\Eloquent\\Model",
     "modifiers": 0,
     "is_trait": false,
@@ -28,7 +22,7 @@
     "properties": {
         "table": {
             "name": "table",
-            "line": 18,
+            "line": 17,
             "short_desc": "The table associated with the model.",
             "long_desc": "",
             "hint": [
@@ -44,8 +38,8 @@
                 "nodeType": "Scalar_String",
                 "value": "user_trades",
                 "attributes": {
-                    "startLine": 18,
-                    "endLine": 18,
+                    "startLine": 17,
+                    "endLine": 17,
                     "kind": 1
                 }
             },
@@ -53,7 +47,7 @@
         },
         "primaryKey": {
             "name": "primaryKey",
-            "line": 25,
+            "line": 24,
             "short_desc": "The primary key for the entity.",
             "long_desc": "",
             "hint": [
@@ -69,8 +63,8 @@
                 "nodeType": "Scalar_String",
                 "value": "id",
                 "attributes": {
-                    "startLine": 25,
-                    "endLine": 25,
+                    "startLine": 24,
+                    "endLine": 24,
                     "kind": 1
                 }
             },
@@ -78,7 +72,7 @@
         },
         "guarded": {
             "name": "guarded",
-            "line": 32,
+            "line": 31,
             "short_desc": "The attributes that aren't mass assignable.",
             "long_desc": "",
             "hint": [
@@ -100,15 +94,15 @@
                             "nodeType": "Scalar_String",
                             "value": "id",
                             "attributes": {
-                                "startLine": 32,
-                                "endLine": 32,
+                                "startLine": 31,
+                                "endLine": 31,
                                 "kind": 1
                             }
                         },
                         "byRef": false,
                         "attributes": {
-                            "startLine": 32,
-                            "endLine": 32
+                            "startLine": 31,
+                            "endLine": 31
                         }
                     },
                     {
@@ -118,15 +112,15 @@
                             "nodeType": "Scalar_String",
                             "value": "created_at",
                             "attributes": {
-                                "startLine": 32,
-                                "endLine": 32,
+                                "startLine": 31,
+                                "endLine": 31,
                                 "kind": 1
                             }
                         },
                         "byRef": false,
                         "attributes": {
-                            "startLine": 32,
-                            "endLine": 32
+                            "startLine": 31,
+                            "endLine": 31
                         }
                     },
                     {
@@ -136,21 +130,21 @@
                             "nodeType": "Scalar_String",
                             "value": "updated_at",
                             "attributes": {
-                                "startLine": 32,
-                                "endLine": 32,
+                                "startLine": 31,
+                                "endLine": 31,
                                 "kind": 1
                             }
                         },
                         "byRef": false,
                         "attributes": {
-                            "startLine": 32,
-                            "endLine": 32
+                            "startLine": 31,
+                            "endLine": 31
                         }
                     }
                 ],
                 "attributes": {
-                    "startLine": 32,
-                    "endLine": 32,
+                    "startLine": 31,
+                    "endLine": 31,
                     "kind": 2
                 }
             },
@@ -160,7 +154,7 @@
     "methods": {
         "coin": {
             "name": "coin",
-            "line": 39,
+            "line": 38,
             "short_desc": "Get the coin that owns the userTrade.",
             "long_desc": "",
             "hint": [
@@ -179,7 +173,7 @@
         },
         "user": {
             "name": "user",
-            "line": 49,
+            "line": 48,
             "short_desc": "Get the coin that owns the userTrade.",
             "long_desc": "",
             "hint": [

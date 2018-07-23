@@ -8,7 +8,7 @@
     "namespace": "App\\Http\\Middleware",
     "file": "\/home\/albemumo\/Workspace\/CreativeHotHouse\/blog\/app\/Http\/Middleware\/RedirectIfAuthenticated.php",
     "relative_file": null,
-    "hash": "99e1fc9d7e220277912272b3998b2410742308d7",
+    "hash": "13437f39f2b832af8818a3a67aa536200adffe5c",
     "parent": null,
     "modifiers": 0,
     "is_trait": false,
@@ -24,7 +24,7 @@
     "methods": {
         "handle": {
             "name": "handle",
-            "line": 18,
+            "line": 19,
             "short_desc": "Handle an incoming request.",
             "long_desc": "",
             "hint": [
@@ -42,7 +42,7 @@
             "parameters": {
                 "request": {
                     "name": "request",
-                    "line": 18,
+                    "line": 19,
                     "short_desc": "",
                     "long_desc": null,
                     "hint": [
@@ -59,7 +59,7 @@
                 },
                 "next": {
                     "name": "next",
-                    "line": 18,
+                    "line": 19,
                     "short_desc": "",
                     "long_desc": null,
                     "hint": [
@@ -75,8 +75,8 @@
                             "Closure"
                         ],
                         "attributes": {
-                            "startLine": 18,
-                            "endLine": 18
+                            "startLine": 19,
+                            "endLine": 19
                         }
                     },
                     "default": null,
@@ -85,7 +85,7 @@
                 },
                 "guard": {
                     "name": "guard",
-                    "line": 18,
+                    "line": 19,
                     "short_desc": "",
                     "long_desc": null,
                     "hint": [

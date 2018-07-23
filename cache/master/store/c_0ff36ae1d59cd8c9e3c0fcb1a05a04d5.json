@@ -8,14 +8,14 @@
     "namespace": "App\\Http\\Middleware",
     "file": "\/home\/albemumo\/Workspace\/CreativeHotHouse\/blog\/app\/Http\/Middleware\/TrustProxies.php",
     "relative_file": null,
-    "hash": "c79f381a75f648bf079705c161e55a3e2d8ada9e",
+    "hash": "690adf868e89d50cbd282f59a78d83dd36517e1a",
     "parent": "Fideloper\\Proxy\\TrustProxies",
     "modifiers": 0,
     "is_trait": false,
     "is_interface": false,
     "aliases": {
-        "Request": "Illuminate\\Http\\Request",
-        "Middleware": "Fideloper\\Proxy\\TrustProxies"
+        "Middleware": "Fideloper\\Proxy\\TrustProxies",
+        "Request": "Illuminate\\Http\\Request"
     },
     "errors": [],
     "interfaces": [],

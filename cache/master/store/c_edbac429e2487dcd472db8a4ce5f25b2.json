@@ -1,20 +1,14 @@
 {
-    "name": "App\\CoinHistorical",
-    "line": 11,
-    "short_desc": "Class CoinHistorical",
+    "name": "App\\Models\\CoinHistorical",
+    "line": 10,
+    "short_desc": "Class CoinHistorical.",
     "long_desc": "",
     "hint": null,
-    "tags": {
-        "package": [
-            [
-                "App"
-            ]
-        ]
-    },
-    "namespace": "App",
-    "file": "\/home\/albemumo\/Workspace\/CreativeHotHouse\/blog\/app\/CoinHistorical.php",
+    "tags": [],
+    "namespace": "App\\Models",
+    "file": "\/home\/albemumo\/Workspace\/CreativeHotHouse\/blog\/app\/Models\/CoinHistorical.php",
     "relative_file": null,
-    "hash": "3241a4ec10ba29f388612fcb287ed26e97c49d06",
+    "hash": "392271145358344467f0d22d6543fc83373f4eea",
     "parent": "Illuminate\\Database\\Eloquent\\Model",
     "modifiers": 0,
     "is_trait": false,
@@ -28,7 +22,7 @@
     "properties": {
         "table": {
             "name": "table",
-            "line": 18,
+            "line": 17,
             "short_desc": "The table associated with the model.",
             "long_desc": "",
             "hint": [
@@ -44,8 +38,8 @@
                 "nodeType": "Scalar_String",
                 "value": "coin_historicals",
                 "attributes": {
-                    "startLine": 18,
-                    "endLine": 18,
+                    "startLine": 17,
+                    "endLine": 17,
                     "kind": 1
                 }
             },
@@ -53,7 +47,7 @@
         },
         "primaryKey": {
             "name": "primaryKey",
-            "line": 25,
+            "line": 24,
             "short_desc": "The primary key for the model.",
             "long_desc": "",
             "hint": [
@@ -69,8 +63,8 @@
                 "nodeType": "Scalar_String",
                 "value": "id",
                 "attributes": {
-                    "startLine": 25,
-                    "endLine": 25,
+                    "startLine": 24,
+                    "endLine": 24,
                     "kind": 1
                 }
             },
@@ -78,7 +72,7 @@
         },
         "timestamps": {
             "name": "timestamps",
-            "line": 32,
+            "line": 31,
             "short_desc": "Indicates if the model should be timestamped.",
             "long_desc": "",
             "hint": [
@@ -98,24 +92,25 @@
                         "false"
                     ],
                     "attributes": {
-                        "startLine": 32,
-                        "endLine": 32,
+                        "startLine": 31,
+                        "endLine": 31,
                         "namespacedName": {
                             "nodeType": "Name_FullyQualified",
                             "parts": [
                                 "App",
+                                "Models",
                                 "false"
                             ],
                             "attributes": {
-                                "startLine": 32,
-                                "endLine": 32
+                                "startLine": 31,
+                                "endLine": 31
                             }
                         }
                     }
                 },
                 "attributes": {
-                    "startLine": 32,
-                    "endLine": 32
+                    "startLine": 31,
+                    "endLine": 31
                 }
             },
             "errors": []
@@ -124,7 +119,7 @@
     "methods": {
         "coin": {
             "name": "coin",
-            "line": 40,
+            "line": 38,
             "short_desc": "Get the coin that owns the coinHistorical.",
             "long_desc": "",
             "hint": [

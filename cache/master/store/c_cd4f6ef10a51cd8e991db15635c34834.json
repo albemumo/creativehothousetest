@@ -1,27 +1,20 @@
 {
     "name": "App\\Repositories\\CoinHistoricalRepository",
-    "line": 12,
-    "short_desc": "Class CoinHistoricalRepository",
+    "line": 10,
+    "short_desc": "Class CoinHistoricalRepository.",
     "long_desc": "",
     "hint": null,
-    "tags": {
-        "package": [
-            [
-                "App\\Repositories"
-            ]
-        ]
-    },
+    "tags": [],
     "namespace": "App\\Repositories",
     "file": "\/home\/albemumo\/Workspace\/CreativeHotHouse\/blog\/app\/Repositories\/CoinHistoricalRepository.php",
     "relative_file": null,
-    "hash": "eba03d500844ca11e09573f1594384d5a19c02d3",
+    "hash": "6c451f640d709c990bbe40702596d6734644cdd0",
     "parent": null,
     "modifiers": 0,
     "is_trait": false,
     "is_interface": false,
     "aliases": {
-        "Coin": "App\\Coin",
-        "CoinHistorical": "App\\CoinHistorical"
+        "CoinHistorical": "App\\Models\\CoinHistorical"
     },
     "errors": [],
     "interfaces": {
@@ -31,12 +24,12 @@
     "properties": {
         "coinHistoricalModel": {
             "name": "coinHistoricalModel",
-            "line": 17,
+            "line": 15,
             "short_desc": "",
             "long_desc": "",
             "hint": [
                 [
-                    "\\App\\CoinHistorical",
+                    "\\App\\Models\\CoinHistorical",
                     false
                 ]
             ],
@@ -50,7 +43,7 @@
     "methods": {
         "__construct": {
             "name": "__construct",
-            "line": 23,
+            "line": 22,
             "short_desc": "CoinHistoricalRepository constructor.",
             "long_desc": "",
             "hint": null,
@@ -63,12 +56,12 @@
             "parameters": {
                 "coinHistoricalModel": {
                     "name": "coinHistoricalModel",
-                    "line": 23,
+                    "line": 22,
                     "short_desc": "",
                     "long_desc": null,
                     "hint": [
                         [
-                            "\\App\\CoinHistorical",
+                            "\\App\\Models\\CoinHistorical",
                             false
                         ]
                     ],
@@ -77,11 +70,12 @@
                         "nodeType": "Name_FullyQualified",
                         "parts": [
                             "App",
+                            "Models",
                             "CoinHistorical"
                         ],
                         "attributes": {
-                            "startLine": 23,
-                            "endLine": 23
+                            "startLine": 22,
+                            "endLine": 22
                         }
                     },
                     "default": null,

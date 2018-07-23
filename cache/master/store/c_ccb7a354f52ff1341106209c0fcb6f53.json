@@ -1,29 +1,69 @@
 {
     "name": "App\\Repositories\\UserRepositoryInterface",
     "line": 10,
-    "short_desc": "Interface UserRepositoryInterface",
+    "short_desc": "Interface UserRepositoryInterface.",
     "long_desc": "",
     "hint": null,
-    "tags": {
-        "package": [
-            [
-                "App\\Repositories"
-            ]
-        ]
-    },
+    "tags": [],
     "namespace": "App\\Repositories",
     "file": "\/home\/albemumo\/Workspace\/CreativeHotHouse\/blog\/app\/Repositories\/UserRepositoryInterface.php",
     "relative_file": null,
-    "hash": "9017fdb946dae9725b8f46d0838efb73baf57082",
+    "hash": "ae9904f243a31e807c5130d31d50eb4df7287877",
     "parent": null,
     "modifiers": null,
     "is_trait": false,
     "is_interface": true,
-    "aliases": [],
+    "aliases": {
+        "User": "App\\Models\\User"
+    },
     "errors": [],
     "interfaces": [],
     "traits": [],
     "properties": [],
-    "methods": [],
+    "methods": {
+        "getUserPortfolio": {
+            "name": "getUserPortfolio",
+            "line": 12,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "user": {
+                    "name": "user",
+                    "line": 12,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\App\\Models\\User",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": {
+                        "nodeType": "Name_FullyQualified",
+                        "parts": [
+                            "App",
+                            "Models",
+                            "User"
+                        ],
+                        "attributes": {
+                            "startLine": 12,
+                            "endLine": 12
+                        }
+                    },
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false
+                }
+            }
+        }
+    },
     "constants": []
 }

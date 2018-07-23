@@ -8,14 +8,14 @@
     "namespace": "App\\Providers",
     "file": "\/home\/albemumo\/Workspace\/CreativeHotHouse\/blog\/app\/Providers\/BroadcastServiceProvider.php",
     "relative_file": null,
-    "hash": "b10849da9343ef9ce146dd3de8ea0527d4c8fb86",
+    "hash": "bae58bde4982baaf3929a3f53e0e6f2ad34bb50e",
     "parent": "Illuminate\\Support\\ServiceProvider",
     "modifiers": 0,
     "is_trait": false,
     "is_interface": false,
     "aliases": {
-        "ServiceProvider": "Illuminate\\Support\\ServiceProvider",
-        "Broadcast": "Illuminate\\Support\\Facades\\Broadcast"
+        "Broadcast": "Illuminate\\Support\\Facades\\Broadcast",
+        "ServiceProvider": "Illuminate\\Support\\ServiceProvider"
     },
     "errors": [],
     "interfaces": [],

@@ -1,20 +1,14 @@
 {
     "name": "App\\Repositories\\CoinRepositoryInterface",
-    "line": 11,
-    "short_desc": "Interface CoinRepositoryInterface",
+    "line": 10,
+    "short_desc": "Interface CoinRepositoryInterface.",
     "long_desc": "",
     "hint": null,
-    "tags": {
-        "package": [
-            [
-                "App\\Repositories"
-            ]
-        ]
-    },
+    "tags": [],
     "namespace": "App\\Repositories",
     "file": "\/home\/albemumo\/Workspace\/CreativeHotHouse\/blog\/app\/Repositories\/CoinRepositoryInterface.php",
     "relative_file": null,
-    "hash": "1f08dbed8f2abfdfff0a04f7ee2a17f3fad05c50",
+    "hash": "6f955bca45972de0ceb8e8588a67c02deb1eb08d",
     "parent": null,
     "modifiers": null,
     "is_trait": false,
@@ -29,7 +23,7 @@
     "methods": {
         "orderByRankAsc": {
             "name": "orderByRankAsc",
-            "line": 16,
+            "line": 15,
             "short_desc": "",
             "long_desc": "",
             "hint": [
@@ -108,23 +102,12 @@
                     "long_desc": null,
                     "hint": [
                         [
-                            "\\Illuminate\\Http\\Request",
+                            "array",
                             false
                         ]
                     ],
                     "tags": [],
-                    "modifiers": {
-                        "nodeType": "Name_FullyQualified",
-                        "parts": [
-                            "Illuminate",
-                            "Http",
-                            "Request"
-                        ],
-                        "attributes": {
-                            "startLine": 29,
-                            "endLine": 29
-                        }
-                    },
+                    "modifiers": "array",
                     "default": null,
                     "variadic": false,
                     "is_by_ref": false

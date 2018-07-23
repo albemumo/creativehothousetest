@@ -1,0 +1,63 @@
+{
+    "name": "App\\Http\\Resources\\CoinResource",
+    "line": 7,
+    "short_desc": "",
+    "long_desc": "",
+    "hint": null,
+    "tags": [],
+    "namespace": "App\\Http\\Resources",
+    "file": "\/home\/albemumo\/Workspace\/CreativeHotHouse\/blog\/app\/Http\/Resources\/CoinResource.php",
+    "relative_file": null,
+    "hash": "ff8af8053dec22d578a98501b65316d9d0bc8901",
+    "parent": "Illuminate\\Http\\Resources\\Json\\JsonResource",
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "aliases": {
+        "JsonResource": "Illuminate\\Http\\Resources\\Json\\JsonResource"
+    },
+    "errors": [],
+    "interfaces": [],
+    "traits": [],
+    "properties": [],
+    "methods": {
+        "toArray": {
+            "name": "toArray",
+            "line": 16,
+            "short_desc": "Transform the resource into an array.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "array",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "request": {
+                    "name": "request",
+                    "line": 16,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\Illuminate\\Http\\Request",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": null,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false
+                }
+            }
+        }
+    },
+    "constants": []
+}

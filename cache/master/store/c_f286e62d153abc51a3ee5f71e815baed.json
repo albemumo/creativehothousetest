@@ -1,6 +1,6 @@
 {
     "name": "App\\Http\\Requests\\StorePortfolioRequest",
-    "line": 8,
+    "line": 7,
     "short_desc": "",
     "long_desc": "",
     "hint": null,
@@ -8,14 +8,13 @@
     "namespace": "App\\Http\\Requests",
     "file": "\/home\/albemumo\/Workspace\/CreativeHotHouse\/blog\/app\/Http\/Requests\/StorePortfolioRequest.php",
     "relative_file": null,
-    "hash": "faab20b0cc3fcf06fb1823cfb2d481130ed3ed12",
+    "hash": "58f82eb0b1b7a0a4368f196429728d6800216d1f",
     "parent": "Illuminate\\Foundation\\Http\\FormRequest",
     "modifiers": 0,
     "is_trait": false,
     "is_interface": false,
     "aliases": {
-        "FormRequest": "Illuminate\\Foundation\\Http\\FormRequest",
-        "JsonResponse": "Illuminate\\Http\\JsonResponse"
+        "FormRequest": "Illuminate\\Foundation\\Http\\FormRequest"
     },
     "errors": [],
     "interfaces": [],
@@ -24,7 +23,7 @@
     "methods": {
         "authorize": {
             "name": "authorize",
-            "line": 15,
+            "line": 14,
             "short_desc": "Determine if the user is authorized to make this request.",
             "long_desc": "",
             "hint": [
@@ -43,7 +42,7 @@
         },
         "rules": {
             "name": "rules",
-            "line": 25,
+            "line": 24,
             "short_desc": "Get the validation rules that apply to the request.",
             "long_desc": "",
             "hint": [

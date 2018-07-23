@@ -8,7 +8,7 @@
     "namespace": "App\\Exceptions",
     "file": "\/home\/albemumo\/Workspace\/CreativeHotHouse\/blog\/app\/Exceptions\/Handler.php",
     "relative_file": null,
-    "hash": "9fce1eb844babec4b51620dc0bb0a085458d27a2",
+    "hash": "db9382e68a5c9e3d2761d785bda27b1fc188cafa",
     "parent": "Illuminate\\Foundation\\Exceptions\\Handler",
     "modifiers": 0,
     "is_trait": false,
@@ -113,7 +113,7 @@
     "methods": {
         "report": {
             "name": "report",
-            "line": 36,
+            "line": 37,
             "short_desc": "Report or log an exception.",
             "long_desc": "",
             "hint": [
@@ -131,7 +131,7 @@
             "parameters": {
                 "exception": {
                     "name": "exception",
-                    "line": 36,
+                    "line": 37,
                     "short_desc": "",
                     "long_desc": null,
                     "hint": [
@@ -147,8 +147,8 @@
                             "Exception"
                         ],
                         "attributes": {
-                            "startLine": 36,
-                            "endLine": 36
+                            "startLine": 37,
+                            "endLine": 37
                         }
                     },
                     "default": null,
@@ -159,7 +159,7 @@
         },
         "render": {
             "name": "render",
-            "line": 48,
+            "line": 50,
             "short_desc": "Render an exception into an HTTP response.",
             "long_desc": "",
             "hint": [
@@ -177,7 +177,7 @@
             "parameters": {
                 "request": {
                     "name": "request",
-                    "line": 48,
+                    "line": 50,
                     "short_desc": "",
                     "long_desc": null,
                     "hint": [
@@ -194,7 +194,7 @@
                 },
                 "exception": {
                     "name": "exception",
-                    "line": 48,
+                    "line": 50,
                     "short_desc": "",
                     "long_desc": null,
                     "hint": [
@@ -210,8 +210,8 @@
                             "Exception"
                         ],
                         "attributes": {
-                            "startLine": 48,
-                            "endLine": 48
+                            "startLine": 50,
+                            "endLine": 50
                         }
                     },
                     "default": null,

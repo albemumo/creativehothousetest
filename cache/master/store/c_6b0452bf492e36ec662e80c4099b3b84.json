@@ -8,7 +8,7 @@
     "namespace": "App\\Http",
     "file": "\/home\/albemumo\/Workspace\/CreativeHotHouse\/blog\/app\/Http\/Kernel.php",
     "relative_file": null,
-    "hash": "cb8fd49e57b0c16a26bf419f5d2356621ee9eedc",
+    "hash": "a3837923c1a8083f4f82f19ff851e242d2a5081b",
     "parent": "Illuminate\\Foundation\\Http\\Kernel",
     "modifiers": 0,
     "is_trait": false,

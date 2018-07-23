@@ -1,6 +1,6 @@
 {
     "name": "App\\Http\\Controllers\\HomeController",
-    "line": 7,
+    "line": 5,
     "short_desc": "",
     "long_desc": "",
     "hint": null,
@@ -8,14 +8,12 @@
     "namespace": "App\\Http\\Controllers",
     "file": "\/home\/albemumo\/Workspace\/CreativeHotHouse\/blog\/app\/Http\/Controllers\/HomeController.php",
     "relative_file": null,
-    "hash": "6f6af344e8538ce8eb774314729cbb182a3788de",
+    "hash": "b8190f3f5a40bf4d36be57167b8f4c755822bcca",
     "parent": "App\\Http\\Controllers\\Controller",
     "modifiers": 0,
     "is_trait": false,
     "is_interface": false,
-    "aliases": {
-        "Request": "Illuminate\\Http\\Request"
-    },
+    "aliases": [],
     "errors": [],
     "interfaces": [],
     "traits": [],
@@ -23,7 +21,7 @@
     "methods": {
         "__construct": {
             "name": "__construct",
-            "line": 14,
+            "line": 12,
             "short_desc": "Create a new controller instance.",
             "long_desc": "",
             "hint": [
@@ -42,7 +40,7 @@
         },
         "index": {
             "name": "index",
-            "line": 24,
+            "line": 22,
             "short_desc": "Show the application dashboard.",
             "long_desc": "",
             "hint": [

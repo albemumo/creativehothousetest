@@ -8,16 +8,16 @@
     "namespace": "App\\Http\\Controllers",
     "file": "\/home\/albemumo\/Workspace\/CreativeHotHouse\/blog\/app\/Http\/Controllers\/Controller.php",
     "relative_file": null,
-    "hash": "2163277c7cc3002baa3d9a9df946e525795f9a98",
+    "hash": "13bddc3dd3192f7c416428851a8e647002f48b11",
     "parent": "Illuminate\\Routing\\Controller",
     "modifiers": 0,
     "is_trait": false,
     "is_interface": false,
     "aliases": {
+        "AuthorizesRequests": "Illuminate\\Foundation\\Auth\\Access\\AuthorizesRequests",
         "DispatchesJobs": "Illuminate\\Foundation\\Bus\\DispatchesJobs",
-        "BaseController": "Illuminate\\Routing\\Controller",
         "ValidatesRequests": "Illuminate\\Foundation\\Validation\\ValidatesRequests",
-        "AuthorizesRequests": "Illuminate\\Foundation\\Auth\\Access\\AuthorizesRequests"
+        "BaseController": "Illuminate\\Routing\\Controller"
     },
     "errors": [],
     "interfaces": [],

@@ -1,26 +1,20 @@
 {
     "name": "App\\Repositories\\UserTradeRepository",
-    "line": 11,
-    "short_desc": "Class UserTradeRepository",
+    "line": 10,
+    "short_desc": "Class UserTradeRepository.",
     "long_desc": "",
     "hint": null,
-    "tags": {
-        "package": [
-            [
-                "App\\Repositories"
-            ]
-        ]
-    },
+    "tags": [],
     "namespace": "App\\Repositories",
     "file": "\/home\/albemumo\/Workspace\/CreativeHotHouse\/blog\/app\/Repositories\/UserTradeRepository.php",
     "relative_file": null,
-    "hash": "883c131de55ed1fd6554c701a62f39a3bb2d7efc",
+    "hash": "9413fd9142b12f48d1759a7e7ae3e328ab3c74ba",
     "parent": null,
     "modifiers": 0,
     "is_trait": false,
     "is_interface": false,
     "aliases": {
-        "UserTrade": "App\\UserTrade"
+        "UserTrade": "App\\Models\\UserTrade"
     },
     "errors": [],
     "interfaces": {
@@ -30,12 +24,12 @@
     "properties": {
         "userTradeModel": {
             "name": "userTradeModel",
-            "line": 16,
+            "line": 15,
             "short_desc": "",
             "long_desc": "",
             "hint": [
                 [
-                    "\\App\\UserTrade",
+                    "\\App\\Models\\UserTrade",
                     false
                 ]
             ],
@@ -67,7 +61,7 @@
                     "long_desc": null,
                     "hint": [
                         [
-                            "\\App\\UserTrade",
+                            "\\App\\Models\\UserTrade",
                             false
                         ]
                     ],
@@ -76,6 +70,7 @@
                         "nodeType": "Name_FullyQualified",
                         "parts": [
                             "App",
+                            "Models",
                             "UserTrade"
                         ],
                         "attributes": {

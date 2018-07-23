@@ -1,27 +1,21 @@
 {
     "name": "App\\Repositories\\UserRepository",
-    "line": 13,
-    "short_desc": "Class UserRepository",
+    "line": 11,
+    "short_desc": "Class UserRepository.",
     "long_desc": "",
     "hint": null,
-    "tags": {
-        "package": [
-            [
-                "App\\Repositories"
-            ]
-        ]
-    },
+    "tags": [],
     "namespace": "App\\Repositories",
     "file": "\/home\/albemumo\/Workspace\/CreativeHotHouse\/blog\/app\/Repositories\/UserRepository.php",
     "relative_file": null,
-    "hash": "97852a4290077b6831cc6d2f3222aa5d6ec52781",
+    "hash": "fe4e89f0be3b73ca49cba9ff4e30c122ad563e8a",
     "parent": null,
     "modifiers": 0,
     "is_trait": false,
     "is_interface": false,
     "aliases": {
         "UserResource": "App\\Http\\Resources\\UserResource",
-        "User": "App\\User"
+        "User": "App\\Models\\User"
     },
     "errors": [],
     "interfaces": {
@@ -31,12 +25,12 @@
     "properties": {
         "userModel": {
             "name": "userModel",
-            "line": 18,
+            "line": 16,
             "short_desc": "",
             "long_desc": "",
             "hint": [
                 [
-                    "\\App\\User",
+                    "\\App\\Models\\User",
                     false
                 ]
             ],
@@ -50,7 +44,7 @@
     "methods": {
         "__construct": {
             "name": "__construct",
-            "line": 25,
+            "line": 23,
             "short_desc": "UserRepository constructor.",
             "long_desc": "",
             "hint": null,
@@ -63,12 +57,12 @@
             "parameters": {
                 "userModel": {
                     "name": "userModel",
-                    "line": 25,
+                    "line": 23,
                     "short_desc": "",
                     "long_desc": null,
                     "hint": [
                         [
-                            "\\App\\User",
+                            "\\App\\Models\\User",
                             false
                         ]
                     ],
@@ -77,11 +71,12 @@
                         "nodeType": "Name_FullyQualified",
                         "parts": [
                             "App",
+                            "Models",
                             "User"
                         ],
                         "attributes": {
-                            "startLine": 25,
-                            "endLine": 25
+                            "startLine": 23,
+                            "endLine": 23
                         }
                     },
                     "default": null,
@@ -92,15 +87,10 @@
         },
         "getUserPortfolio": {
             "name": "getUserPortfolio",
-            "line": 34,
+            "line": 33,
             "short_desc": "",
             "long_desc": "",
-            "hint": [
-                [
-                    "\\App\\Http\\Resources\\UserResource",
-                    false
-                ]
-            ],
+            "hint": null,
             "hint_desc": "",
             "tags": [],
             "modifiers": 1,
@@ -110,12 +100,12 @@
             "parameters": {
                 "user": {
                     "name": "user",
-                    "line": 34,
+                    "line": 33,
                     "short_desc": "",
                     "long_desc": null,
                     "hint": [
                         [
-                            "\\App\\User",
+                            "\\App\\Models\\User",
                             false
                         ]
                     ],
@@ -124,11 +114,12 @@
                         "nodeType": "Name_FullyQualified",
                         "parts": [
                             "App",
+                            "Models",
                             "User"
                         ],
                         "attributes": {
-                            "startLine": 34,
-                            "endLine": 34
+                            "startLine": 33,
+                            "endLine": 33
                         }
                     },
                     "default": null,

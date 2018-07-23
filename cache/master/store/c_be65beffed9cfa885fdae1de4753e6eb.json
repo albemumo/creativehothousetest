@@ -8,14 +8,14 @@
     "namespace": "App\\Providers",
     "file": "\/home\/albemumo\/Workspace\/CreativeHotHouse\/blog\/app\/Providers\/RouteServiceProvider.php",
     "relative_file": null,
-    "hash": "f63ca296b61e5db05dfb09cd363884a0673cd06b",
+    "hash": "8d1ca66a92c035ce416c9b32875274d6bb3f41d9",
     "parent": "Illuminate\\Foundation\\Support\\Providers\\RouteServiceProvider",
     "modifiers": 0,
     "is_trait": false,
     "is_interface": false,
     "aliases": {
-        "Route": "Illuminate\\Support\\Facades\\Route",
-        "ServiceProvider": "Illuminate\\Foundation\\Support\\Providers\\RouteServiceProvider"
+        "ServiceProvider": "Illuminate\\Foundation\\Support\\Providers\\RouteServiceProvider",
+        "Route": "Illuminate\\Support\\Facades\\Route"
     },
     "errors": [],
     "interfaces": [],

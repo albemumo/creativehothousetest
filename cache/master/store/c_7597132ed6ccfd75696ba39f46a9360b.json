@@ -8,17 +8,17 @@
     "namespace": "App\\Http\\Controllers\\Auth",
     "file": "\/home\/albemumo\/Workspace\/CreativeHotHouse\/blog\/app\/Http\/Controllers\/Auth\/RegisterController.php",
     "relative_file": null,
-    "hash": "46e2027893ec00e2cd13fde453a12984b673b490",
+    "hash": "239f7a18abce986c68c53fa5555bfd75d918cd9e",
     "parent": "App\\Http\\Controllers\\Controller",
     "modifiers": 0,
     "is_trait": false,
     "is_interface": false,
     "aliases": {
-        "User": "App\\User",
         "Controller": "App\\Http\\Controllers\\Controller",
+        "User": "App\\Models\\User",
+        "RegistersUsers": "Illuminate\\Foundation\\Auth\\RegistersUsers",
         "Hash": "Illuminate\\Support\\Facades\\Hash",
-        "Validator": "Illuminate\\Support\\Facades\\Validator",
-        "RegistersUsers": "Illuminate\\Foundation\\Auth\\RegistersUsers"
+        "Validator": "Illuminate\\Support\\Facades\\Validator"
     },
     "errors": [],
     "interfaces": [],
@@ -74,7 +74,7 @@
         },
         "validator": {
             "name": "validator",
-            "line": 49,
+            "line": 50,
             "short_desc": "Get a validator for an incoming registration request.",
             "long_desc": "",
             "hint": [
@@ -92,7 +92,7 @@
             "parameters": {
                 "data": {
                     "name": "data",
-                    "line": 49,
+                    "line": 50,
                     "short_desc": "",
                     "long_desc": null,
                     "hint": [
@@ -111,12 +111,12 @@
         },
         "create": {
             "name": "create",
-            "line": 64,
+            "line": 66,
             "short_desc": "Create a new user instance after a valid registration.",
             "long_desc": "",
             "hint": [
                 [
-                    "\\App\\User",
+                    "\\App\\Models\\User",
                     false
                 ]
             ],
@@ -129,7 +129,7 @@
             "parameters": {
                 "data": {
                     "name": "data",
-                    "line": 64,
+                    "line": 66,
                     "short_desc": "",
                     "long_desc": null,
                     "hint": [

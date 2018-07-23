@@ -8,7 +8,7 @@
     "namespace": "App\\Console",
     "file": "\/home\/albemumo\/Workspace\/CreativeHotHouse\/blog\/app\/Console\/Kernel.php",
     "relative_file": null,
-    "hash": "cd91585cead4e037d4b0d4fcc5ee3605b0c5bb7c",
+    "hash": "2722d572f1f487f09e737611d5696413f4c1d4d1",
     "parent": "Illuminate\\Foundation\\Console\\Kernel",
     "modifiers": 0,
     "is_trait": false,
@@ -50,7 +50,7 @@
     "methods": {
         "schedule": {
             "name": "schedule",
-            "line": 25,
+            "line": 26,
             "short_desc": "Define the application's command schedule.",
             "long_desc": "",
             "hint": [
@@ -68,7 +68,7 @@
             "parameters": {
                 "schedule": {
                     "name": "schedule",
-                    "line": 25,
+                    "line": 26,
                     "short_desc": "",
                     "long_desc": null,
                     "hint": [
@@ -87,8 +87,8 @@
                             "Schedule"
                         ],
                         "attributes": {
-                            "startLine": 25,
-                            "endLine": 25
+                            "startLine": 26,
+                            "endLine": 26
                         }
                     },
                     "default": null,
@@ -99,7 +99,7 @@
         },
         "commands": {
             "name": "commands",
-            "line": 36,
+            "line": 37,
             "short_desc": "Register the commands for the application.",
             "long_desc": "",
             "hint": [

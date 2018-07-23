@@ -1,14 +1,20 @@
 {
     "name": "App\\Http\\Controllers\\PortfolioController",
-    "line": 15,
-    "short_desc": "",
+    "line": 21,
+    "short_desc": "Class PortfolioController",
     "long_desc": "",
     "hint": null,
-    "tags": [],
+    "tags": {
+        "package": [
+            [
+                "App\\Http\\Controllers"
+            ]
+        ]
+    },
     "namespace": "App\\Http\\Controllers",
     "file": "\/home\/albemumo\/Workspace\/CreativeHotHouse\/blog\/app\/Http\/Controllers\/PortfolioController.php",
     "relative_file": null,
-    "hash": "5fd3f959762d4c116d32c5cc46f3f8dead366130",
+    "hash": "216a72ea4c2fceb974143fc99f61f4b76569deb9",
     "parent": "App\\Http\\Controllers\\Controller",
     "modifiers": 0,
     "is_trait": false,
@@ -16,10 +22,13 @@
     "aliases": {
         "StorePortfolioRequest": "App\\Http\\Requests\\StorePortfolioRequest",
         "UserResource": "App\\Http\\Resources\\UserResource",
+        "UserTradeResource": "App\\Http\\Resources\\UserTradeResource",
+        "UserRepository": "App\\Repositories\\UserRepository",
         "UserRepositoryInterface": "App\\Repositories\\UserRepositoryInterface",
+        "UserTradeRepository": "App\\Repositories\\UserTradeRepository",
         "UserTradeRepositoryInterface": "App\\Repositories\\UserTradeRepositoryInterface",
-        "User": "App\\User",
-        "UserTrade": "App\\UserTrade",
+        "User": "App\\Models\\User",
+        "UserTrade": "App\\Models\\UserTrade",
         "Request": "Illuminate\\Http\\Request",
         "Auth": "Illuminate\\Support\\Facades\\Auth"
     },
@@ -30,8 +39,8 @@
     "methods": {
         "__construct": {
             "name": "__construct",
-            "line": 21,
-            "short_desc": "",
+            "line": 38,
+            "short_desc": "PortfolioController constructor.",
             "long_desc": "",
             "hint": null,
             "hint_desc": null,
@@ -43,12 +52,12 @@
             "parameters": {
                 "userRepository": {
                     "name": "userRepository",
-                    "line": 21,
-                    "short_desc": null,
+                    "line": 38,
+                    "short_desc": "",
                     "long_desc": null,
                     "hint": [
                         [
-                            "\\App\\Repositories\\UserRepositoryInterface",
+                            "\\App\\Repositories\\UserRepository",
                             false
                         ]
                     ],
@@ -58,11 +67,11 @@
                         "parts": [
                             "App",
                             "Repositories",
-                            "UserRepositoryInterface"
+                            "UserRepository"
                         ],
                         "attributes": {
-                            "startLine": 21,
-                            "endLine": 21
+                            "startLine": 38,
+                            "endLine": 38
                         }
                     },
                     "default": null,
@@ -71,12 +80,12 @@
                 },
                 "userTradeRepository": {
                     "name": "userTradeRepository",
-                    "line": 21,
-                    "short_desc": null,
+                    "line": 38,
+                    "short_desc": "",
                     "long_desc": null,
                     "hint": [
                         [
-                            "\\App\\Repositories\\UserTradeRepositoryInterface",
+                            "\\App\\Repositories\\UserTradeRepository",
                             false
                         ]
                     ],
@@ -86,11 +95,11 @@
                         "parts": [
                             "App",
                             "Repositories",
-                            "UserTradeRepositoryInterface"
+                            "UserTradeRepository"
                         ],
                         "attributes": {
-                            "startLine": 21,
-                            "endLine": 21
+                            "startLine": 38,
+                            "endLine": 38
                         }
                     },
                     "default": null,
@@ -101,7 +110,7 @@
         },
         "index": {
             "name": "index",
-            "line": 32,
+            "line": 49,
             "short_desc": "Display a listing of the user resource.",
             "long_desc": "",
             "hint": [
@@ -120,12 +129,12 @@
         },
         "store": {
             "name": "store",
-            "line": 45,
+            "line": 61,
             "short_desc": "Store a newly created resource in storage for Auth user.",
             "long_desc": "",
             "hint": [
                 [
-                    "\\App\\UserTrade",
+                    "\\App\\Http\\Resources\\UserTradeResource",
                     false
                 ]
             ],
@@ -138,7 +147,7 @@
             "parameters": {
                 "request": {
                     "name": "request",
-                    "line": 45,
+                    "line": 61,
                     "short_desc": "",
                     "long_desc": null,
                     "hint": [
@@ -157,8 +166,8 @@
                             "StorePortfolioRequest"
                         ],
                         "attributes": {
-                            "startLine": 45,
-                            "endLine": 45
+                            "startLine": 61,
+                            "endLine": 61
                         }
                     },
                     "default": null,

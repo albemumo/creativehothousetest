@@ -1,28 +1,20 @@
 {
-    "name": "App\\Coin",
-    "line": 13,
-    "short_desc": "Class Coin",
+    "name": "App\\Models\\Coin",
+    "line": 10,
+    "short_desc": "Class Coin.",
     "long_desc": "",
     "hint": null,
-    "tags": {
-        "package": [
-            [
-                "App"
-            ]
-        ]
-    },
-    "namespace": "App",
-    "file": "\/home\/albemumo\/Workspace\/CreativeHotHouse\/blog\/app\/Coin.php",
+    "tags": [],
+    "namespace": "App\\Models",
+    "file": "\/home\/albemumo\/Workspace\/CreativeHotHouse\/blog\/app\/Models\/Coin.php",
     "relative_file": null,
-    "hash": "1c797d2ee5d5fc521ed691262b04fbd96d1eb90b",
+    "hash": "da696a56ea4a76e49817690363a943090f244f3a",
     "parent": "Illuminate\\Database\\Eloquent\\Model",
     "modifiers": 0,
     "is_trait": false,
     "is_interface": false,
     "aliases": {
-        "Carbon": "Carbon\\Carbon",
-        "Model": "Illuminate\\Database\\Eloquent\\Model",
-        "Request": "Illuminate\\Http\\Request"
+        "Model": "Illuminate\\Database\\Eloquent\\Model"
     },
     "errors": [],
     "interfaces": [],
@@ -30,7 +22,7 @@
     "properties": {
         "table": {
             "name": "table",
-            "line": 20,
+            "line": 17,
             "short_desc": "The table associated with the model.",
             "long_desc": "",
             "hint": [
@@ -46,8 +38,8 @@
                 "nodeType": "Scalar_String",
                 "value": "coins",
                 "attributes": {
-                    "startLine": 20,
-                    "endLine": 20,
+                    "startLine": 17,
+                    "endLine": 17,
                     "kind": 1
                 }
             },
@@ -55,7 +47,7 @@
         },
         "primaryKey": {
             "name": "primaryKey",
-            "line": 27,
+            "line": 24,
             "short_desc": "The primary key for the model.",
             "long_desc": "",
             "hint": [
@@ -71,8 +63,8 @@
                 "nodeType": "Scalar_String",
                 "value": "id",
                 "attributes": {
-                    "startLine": 27,
-                    "endLine": 27,
+                    "startLine": 24,
+                    "endLine": 24,
                     "kind": 1
                 }
             },
@@ -82,7 +74,7 @@
     "methods": {
         "userTrades": {
             "name": "userTrades",
-            "line": 35,
+            "line": 31,
             "short_desc": "Get the userTrade for the coin.",
             "long_desc": "",
             "hint": [
@@ -101,7 +93,7 @@
         },
         "coinHistoricals": {
             "name": "coinHistoricals",
-            "line": 45,
+            "line": 41,
             "short_desc": "Get the coinHistorical for the coin.",
             "long_desc": "",
             "hint": [

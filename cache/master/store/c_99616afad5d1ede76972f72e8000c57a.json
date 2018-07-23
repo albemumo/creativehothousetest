@@ -1,33 +1,23 @@
 {
     "name": "App\\Http\\Controllers\\CoinController",
-    "line": 18,
-    "short_desc": "Class CoinController",
+    "line": 13,
+    "short_desc": "Class CoinController.",
     "long_desc": "",
     "hint": null,
-    "tags": {
-        "package": [
-            [
-                "App\\Http\\Controllers"
-            ]
-        ]
-    },
+    "tags": [],
     "namespace": "App\\Http\\Controllers",
     "file": "\/home\/albemumo\/Workspace\/CreativeHotHouse\/blog\/app\/Http\/Controllers\/CoinController.php",
     "relative_file": null,
-    "hash": "9c78b4d5b7125343608b99e3a6f2ec1e884c81d9",
+    "hash": "01089fd65d4acacf587e3a617fce941698dabedc",
     "parent": "App\\Http\\Controllers\\Controller",
     "modifiers": 0,
     "is_trait": false,
     "is_interface": false,
     "aliases": {
-        "Coin": "App\\Coin",
-        "CoinHistorical": "App\\CoinHistorical",
+        "CoinRepository": "App\\Repositories\\CoinRepository",
         "CoinRepositoryInterface": "App\\Repositories\\CoinRepositoryInterface",
-        "Carbon": "Carbon\\Carbon",
-        "DateTime": "DateTime",
         "Model": "Illuminate\\Database\\Eloquent\\Model",
-        "Request": "Illuminate\\Http\\Request",
-        "App": "Illuminate\\Support\\Facades\\App"
+        "Request": "Illuminate\\Http\\Request"
     },
     "errors": [],
     "interfaces": [],
@@ -36,7 +26,7 @@
     "methods": {
         "__construct": {
             "name": "__construct",
-            "line": 29,
+            "line": 24,
             "short_desc": "CoinController constructor.",
             "long_desc": "",
             "hint": null,
@@ -49,12 +39,12 @@
             "parameters": {
                 "coinRepository": {
                     "name": "coinRepository",
-                    "line": 29,
+                    "line": 24,
                     "short_desc": "",
                     "long_desc": null,
                     "hint": [
                         [
-                            "\\App\\Repositories\\CoinRepositoryInterface",
+                            "\\App\\Repositories\\CoinRepository",
                             false
                         ]
                     ],
@@ -64,11 +54,11 @@
                         "parts": [
                             "App",
                             "Repositories",
-                            "CoinRepositoryInterface"
+                            "CoinRepository"
                         ],
                         "attributes": {
-                            "startLine": 29,
-                            "endLine": 29
+                            "startLine": 24,
+                            "endLine": 24
                         }
                     },
                     "default": null,
@@ -79,7 +69,7 @@
         },
         "index": {
             "name": "index",
-            "line": 39,
+            "line": 34,
             "short_desc": "Display a listing of the resource.",
             "long_desc": "",
             "hint": [
@@ -98,7 +88,7 @@
         },
         "show": {
             "name": "show",
-            "line": 50,
+            "line": 46,
             "short_desc": "Display the specified resource.",
             "long_desc": "",
             "hint": [
@@ -120,7 +110,7 @@
             "parameters": {
                 "id": {
                     "name": "id",
-                    "line": 50,
+                    "line": 46,
                     "short_desc": "",
                     "long_desc": null,
                     "hint": [
@@ -139,7 +129,7 @@
         },
         "historical": {
             "name": "historical",
-            "line": 63,
+            "line": 59,
             "short_desc": "Display the specified resource historical listing.",
             "long_desc": "",
             "hint": [
@@ -157,7 +147,7 @@
             "parameters": {
                 "request": {
                     "name": "request",
-                    "line": 63,
+                    "line": 59,
                     "short_desc": "",
                     "long_desc": null,
                     "hint": [
@@ -175,8 +165,8 @@
                             "Request"
                         ],
                         "attributes": {
-                            "startLine": 63,
-                            "endLine": 63
+                            "startLine": 59,
+                            "endLine": 59
                         }
                     },
                     "default": null,
@@ -185,7 +175,7 @@
                 },
                 "id": {
                     "name": "id",
-                    "line": 63,
+                    "line": 59,
                     "short_desc": "",
                     "long_desc": null,
                     "hint": [

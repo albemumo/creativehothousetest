@@ -1,27 +1,23 @@
 {
     "name": "App\\Repositories\\CoinRepository",
-    "line": 14,
-    "short_desc": "Class CoinRepository",
+    "line": 15,
+    "short_desc": "Class CoinRepository.",
     "long_desc": "",
     "hint": null,
-    "tags": {
-        "package": [
-            [
-                "App\\Repositories"
-            ]
-        ]
-    },
+    "tags": [],
     "namespace": "App\\Repositories",
     "file": "\/home\/albemumo\/Workspace\/CreativeHotHouse\/blog\/app\/Repositories\/CoinRepository.php",
     "relative_file": null,
-    "hash": "3696d3af9114eff0fc25632ef9e3bec5e4e3f744",
+    "hash": "5cbe3a6ae726318628f02ec1229d8314dab21749",
     "parent": null,
     "modifiers": 0,
     "is_trait": false,
     "is_interface": false,
     "aliases": {
-        "Coin": "App\\Coin",
-        "CoinHistorical": "App\\CoinHistorical",
+        "Coin": "App\\Models\\Coin",
+        "CoinHistorical": "App\\Models\\CoinHistorical",
+        "CoinResource": "App\\Http\\Resources\\CoinResource",
+        "CoinResourceCollection": "App\\Http\\Resources\\CoinResourceCollection",
         "Request": "Illuminate\\Http\\Request",
         "Carbon": "Illuminate\\Support\\Carbon"
     },
@@ -33,12 +29,12 @@
     "properties": {
         "coinModel": {
             "name": "coinModel",
-            "line": 19,
+            "line": 20,
             "short_desc": "",
             "long_desc": "",
             "hint": [
                 [
-                    "\\App\\Coin",
+                    "\\App\\Models\\Coin",
                     false
                 ]
             ],
@@ -50,12 +46,12 @@
         },
         "coinHistoricalModel": {
             "name": "coinHistoricalModel",
-            "line": 24,
+            "line": 25,
             "short_desc": "",
             "long_desc": "",
             "hint": [
                 [
-                    "\\App\\CoinHistorical",
+                    "\\App\\Models\\CoinHistorical",
                     false
                 ]
             ],
@@ -69,7 +65,7 @@
     "methods": {
         "__construct": {
             "name": "__construct",
-            "line": 31,
+            "line": 33,
             "short_desc": "CoinRepository constructor.",
             "long_desc": "",
             "hint": null,
@@ -82,12 +78,12 @@
             "parameters": {
                 "coinModel": {
                     "name": "coinModel",
-                    "line": 31,
+                    "line": 33,
                     "short_desc": "",
                     "long_desc": null,
                     "hint": [
                         [
-                            "\\App\\Coin",
+                            "\\App\\Models\\Coin",
                             false
                         ]
                     ],
@@ -96,11 +92,12 @@
                         "nodeType": "Name_FullyQualified",
                         "parts": [
                             "App",
+                            "Models",
                             "Coin"
                         ],
                         "attributes": {
-                            "startLine": 31,
-                            "endLine": 31
+                            "startLine": 33,
+                            "endLine": 33
                         }
                     },
                     "default": null,
@@ -109,12 +106,12 @@
                 },
                 "coinHistoricalModel": {
                     "name": "coinHistoricalModel",
-                    "line": 31,
+                    "line": 33,
                     "short_desc": "",
                     "long_desc": null,
                     "hint": [
                         [
-                            "\\App\\CoinHistorical",
+                            "\\App\\Models\\CoinHistorical",
                             false
                         ]
                     ],
@@ -123,11 +120,12 @@
                         "nodeType": "Name_FullyQualified",
                         "parts": [
                             "App",
+                            "Models",
                             "CoinHistorical"
                         ],
                         "attributes": {
-                            "startLine": 31,
-                            "endLine": 31
+                            "startLine": 33,
+                            "endLine": 33
                         }
                     },
                     "default": null,
@@ -138,7 +136,7 @@
         },
         "orderByRankAsc": {
             "name": "orderByRankAsc",
-            "line": 40,
+            "line": 42,
             "short_desc": "",
             "long_desc": "",
             "hint": [
@@ -157,7 +155,7 @@
         },
         "getByIdOrFail": {
             "name": "getByIdOrFail",
-            "line": 49,
+            "line": 52,
             "short_desc": "",
             "long_desc": "",
             "hint": [
@@ -175,7 +173,7 @@
             "parameters": {
                 "id": {
                     "name": "id",
-                    "line": 49,
+                    "line": 52,
                     "short_desc": "",
                     "long_desc": null,
                     "hint": [
@@ -194,7 +192,7 @@
         },
         "getCoinHistoricalBetweenDates": {
             "name": "getCoinHistoricalBetweenDates",
-            "line": 59,
+            "line": 63,
             "short_desc": "",
             "long_desc": "",
             "hint": [
@@ -204,43 +202,40 @@
                 ]
             ],
             "hint_desc": "",
-            "tags": [],
+            "tags": {
+                "internal": [
+                    [
+                        "param",
+                        "Request",
+                        "$request"
+                    ]
+                ]
+            },
             "modifiers": 1,
             "is_by_ref": "",
             "exceptions": [],
             "errors": [],
             "parameters": {
-                "request": {
-                    "name": "request",
-                    "line": 59,
+                "betweenDates": {
+                    "name": "betweenDates",
+                    "line": 63,
                     "short_desc": "",
                     "long_desc": null,
                     "hint": [
                         [
-                            "\\Illuminate\\Http\\Request",
+                            "array",
                             false
                         ]
                     ],
                     "tags": [],
-                    "modifiers": {
-                        "nodeType": "Name_FullyQualified",
-                        "parts": [
-                            "Illuminate",
-                            "Http",
-                            "Request"
-                        ],
-                        "attributes": {
-                            "startLine": 59,
-                            "endLine": 59
-                        }
-                    },
+                    "modifiers": "array",
                     "default": null,
                     "variadic": false,
                     "is_by_ref": false
                 },
                 "id": {
                     "name": "id",
-                    "line": 59,
+                    "line": 63,
                     "short_desc": "",
                     "long_desc": null,
                     "hint": [

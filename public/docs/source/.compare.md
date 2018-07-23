@@ -17,7 +17,6 @@ toc_footers:
 
 Welcome to the generated API reference.
 [Get Postman Collection](http://localhost/docs/collection.json)
-
 <!-- END_INFO -->
 
 #general
@@ -104,7 +103,7 @@ $.ajax(settings).done(function (response) {
 
 ```json
 {
-    "error": "App\\Coin {1} not found"
+    "error": "App\\Models\\Coin {1} not found"
 }
 ```
 
@@ -146,7 +145,7 @@ $.ajax(settings).done(function (response) {
 
 ```json
 {
-    "error": "App\\Coin {1} not found"
+    "error": "App\\Models\\Coin {1} not found"
 }
 ```
 
