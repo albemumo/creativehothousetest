@@ -12,6 +12,7 @@ before_script:
   - mysql -u root -e "FLUSH PRIVILEGES;"
   - composer self-update
   - composer install --no-interaction
+  - php artisan migrate --force
   - php artisan passport:install --force
   - php artisan key:generate
 
