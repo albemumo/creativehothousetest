@@ -6,7 +6,10 @@ php:
 
 before_script:
   - cp .env.example .env
-  - mysql -e 'create database homestead;'
+  - mysql -u root -e 'CREATE SCHEMA IF NOT EXISTS homestead DEFAULT CHARACTER SET utf8mb4 DEFAULT COLLATE utf8mb4_unicode_ci;'
+  - mysql -u root -e "CREATE USER 'homestead'@'localhost' IDENTIFIED BY 'secret';"
+  - mysql -u root -e "GRANT ALL ON homestead.* to homestead@'localhost' IDENTIFIED BY 'secret';"
+  - mysql -u root -e "FLUSH PRIVILEGES;"
   - composer self-update
   - composer install --no-interaction
 
