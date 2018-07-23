@@ -5,20 +5,37 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StorePortfolioRequest;
 use App\Http\Resources\UserResource;
 use App\Http\Resources\UserTradeResource;
+use App\Repositories\UserRepository;
 use App\Repositories\UserRepositoryInterface;
+use App\Repositories\UserTradeRepository;
 use App\Repositories\UserTradeRepositoryInterface;
 use App\Models\User;
 use App\Models\UserTrade;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
+/**
+ * Class PortfolioController
+ * @package App\Http\Controllers
+ */
 class PortfolioController extends Controller
 {
+    /**
+     * @var UserRepository
+     */
     private $userRepository;
 
+    /**
+     * @var UserTradeRepository
+     */
     private $userTradeRepository;
 
-    public function __construct(UserRepositoryInterface $userRepository, UserTradeRepositoryInterface $userTradeRepository)
+    /**
+     * PortfolioController constructor.
+     * @param UserRepository $userRepository
+     * @param UserTradeRepository $userTradeRepository
+     */
+    public function __construct(UserRepository $userRepository, UserTradeRepository $userTradeRepository)
     {
         $this->userRepository = $userRepository;
         $this->userTradeRepository = $userTradeRepository;
@@ -31,9 +48,7 @@ class PortfolioController extends Controller
      */
     public function index()
     {
-        $user = Auth::user();
-
-        return $this->userRepository->getUserPortfolio($user);
+        return $this->userRepository->getUserPortfolio(Auth::user());
     }
 
     /**
@@ -45,15 +60,13 @@ class PortfolioController extends Controller
      */
     public function store(StorePortfolioRequest $request)
     {
-        $user = Auth::user();
-
         return new UserTradeResource(
             UserTrade::create([
                 'coin_id'   => $request->get('coin_id'),
                 'amount'    => $request->get('amount'),
                 'price_usd' => $request->get('price_usd'),
                 'traded_at' => $request->get('traded_at'),
-                'user_id'   => $user->id,
+                'user_id'   => Auth::user()->id,
                 'notes'     => $request->get('notes'),
             ])
         );

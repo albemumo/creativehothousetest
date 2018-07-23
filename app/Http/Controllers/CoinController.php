@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Repositories\CoinRepository;
 use App\Repositories\CoinRepositoryInterface;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
@@ -18,10 +19,9 @@ class CoinController extends Controller
 
     /**
      * CoinController constructor.
-     *
-     * @param CoinRepositoryInterface $coinRepository
+     * @param CoinRepository $coinRepository
      */
-    public function __construct(CoinRepositoryInterface $coinRepository)
+    public function __construct(CoinRepository $coinRepository)
     {
         $this->coinRepository = $coinRepository;
     }
@@ -58,6 +58,6 @@ class CoinController extends Controller
      */
     public function historical(Request $request, int $id)
     {
-        return $this->coinRepository->getCoinHistoricalBetweenDates($request, $id);
+        return $this->coinRepository->getCoinHistoricalBetweenDates($request->only(['start', 'end']), $id);
     }
 }
